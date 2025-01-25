@@ -1,11 +1,11 @@
 import HeroSection from "@/components/atoms/HeroSection";
-import BestSellersCarousel from "@/components/molecules/BestSellersCarousel";
+import BestSellersSection from "@/components/molecules/BestSellersSection";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <BestSellersCarousel tickets={[]} />
+      <BestSellersSection tickets={[]} />
     </main>
   );
 }

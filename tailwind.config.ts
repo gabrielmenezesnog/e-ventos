@@ -13,6 +13,7 @@ export default {
         primary: "var(--primary)",
         gray_6: "var(--gray-6)",
         gray_5: "var(--gray-5)",
+        gray_1: "var(--gray-1)",
       },
       boxShadow: {
         white: "inset 0 -100px 0 0 white",
