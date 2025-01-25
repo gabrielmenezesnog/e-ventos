@@ -22,7 +22,7 @@ const BestSellersCarousel: React.FC<iProps> = ({ tickets, isLoading }) => {
   }
 
   return (
-    <ul className="flex flex-wrap lg:flex-row sm:flex-col gap-4 mt-5">
+    <ul className="mt-5 flex gap-5 overflow-x-auto lg:max-w-[1320px] lg:flex-row lg:overflow-x-scroll lg:flex-nowrap sm:flex-col ml-5">
       {tickets.map((ticket) => (
         <li
           key={ticket.id}

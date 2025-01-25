@@ -12,15 +12,19 @@ interface iProps {
 
 const BestSellersSection: React.FC<iProps> = ({ tickets, isLoading }) => {
   return (
-    <div className="mb-10 px-5">
-      <div className="container">
-        <SectionTitle
-          normalText="mais procurados"
-          coloredText="."
-          isDark={false}
-        />
+    <div className="mb-10">
+      <div>
+        <div className="container px-5">
+          <SectionTitle
+            normalText="mais procurados"
+            coloredText="."
+            isDark={false}
+          />
+        </div>
 
-        <BestSellersCarousel tickets={tickets} isLoading={isLoading} />
+        <div className="flex flex-row justify-center">
+          <BestSellersCarousel tickets={tickets} isLoading={isLoading} />
+        </div>
       </div>
     </div>
   );
