@@ -10,8 +10,8 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between">
           <div className="w-full mb-4 sm:mb-0 sm:w-auto sm:flex-none sm:text-left">
             <Image
-              src="/images/Logo.svg"
-              alt="Logo"
+              src="/images/logo.svg"
+              alt="logo"
               width={200}
               height={100}
               className="mx-0 sm:mx-0"

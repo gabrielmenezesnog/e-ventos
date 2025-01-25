@@ -19,7 +19,7 @@ const Header: React.FC = () => {
     <header className="bg-black py-6 px-10">
       <div className="container flex flex-col sm:flex-row items-center justify-between">
         <div onClick={handleLogoClick} className="cursor-pointer mb-4 sm:mb-0">
-          <Image src="/images/Logo.svg" alt="Logo" width={200} height={100} />
+          <Image src="/images/logo.svg" alt="logo" width={200} height={100} />
         </div>
 
         <nav>
