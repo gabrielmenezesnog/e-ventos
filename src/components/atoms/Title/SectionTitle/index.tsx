@@ -17,7 +17,7 @@ const SectionTitle: React.FC<iProps> = ({
     <h1
       className={`${
         isDark ? "text-white" : "text-black"
-      } text-6xl font-medium leading-tight`}
+      } text-4xl sm:text-5xl md:text-6xl font-medium leading-tight`}
     >
       {normalText}
       <span className="text-primary">{coloredText}</span>

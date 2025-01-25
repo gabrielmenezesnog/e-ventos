@@ -174,3 +174,9 @@ img {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1.25rem;
+  }
+}

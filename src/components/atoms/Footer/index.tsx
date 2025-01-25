@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
     <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center sm:flex-row sm:items-center sm:justify-between">
-          <div className="w-full mb-4 sm:mb-0 sm:w-auto sm:flex-none sm:text-left">
+          <div className="w-full mb-4 sm:mb-0 sm:w-auto sm:flex-none sm:text-left text-center">
             <Image
               src="/images/logo.svg"
               alt="logo"
               width={200}
               height={100}
-              className="mx-0 sm:mx-0"
+              className="mx-auto sm:mx-0"
             />
           </div>
 
