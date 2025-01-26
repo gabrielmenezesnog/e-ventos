@@ -5,13 +5,13 @@ import React from "react";
 interface iProps {
   normalText: string;
   coloredText: string;
-  isDark: boolean;
+  isDark?: boolean;
 }
 
 const SectionTitle: React.FC<iProps> = ({
   normalText,
   coloredText,
-  isDark,
+  isDark = true,
 }) => {
   return (
     <h1

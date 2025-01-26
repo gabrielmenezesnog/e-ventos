@@ -1,7 +1,12 @@
+import PageHeader from "@/components/atoms/PageTitle";
+
 export default function EventsPage() {
   return (
     <div>
-      <h1>Events</h1>
+      <PageHeader
+        title="nossos eventos"
+        subtitle="ESCOLHA O MELHOR PARA VOCÊ"
+      />
     </div>
   );
 }
