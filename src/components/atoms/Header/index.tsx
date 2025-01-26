@@ -9,7 +9,7 @@ const Header: React.FC = () => {
   const pathname = usePathname();
 
   const isActive = (path: string) =>
-    pathname === path ? "text-primary" : "text-white";
+    pathname === path ? "text-white border-b-[4px] border-white" : "text-white";
 
   const handleLogoClick = () => {
     window.location.href = "/";
@@ -24,6 +24,11 @@ const Header: React.FC = () => {
 
         <nav>
           <ul className="flex items-center space-x-4 underline">
+            <li>
+              <Link href="/" className={isActive("/")}>
+                início
+              </Link>
+            </li>
             <li>
               <Link href="/events" className={isActive("/events")}>
                 eventos
