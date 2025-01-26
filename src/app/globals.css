@@ -27,6 +27,7 @@ body {
   color: var(--text);
   background: var(--background);
   font-family: var(--font-poppins);
+  margin-top: 110px;
 }
 
 *,
@@ -176,6 +177,10 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    margin-top: 180px;
+  }
+
   .container {
     padding: 1.25rem;
   }
