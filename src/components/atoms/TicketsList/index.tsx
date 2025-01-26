@@ -6,9 +6,10 @@ import { iTickets } from "@/interfaces/iTickets";
 interface iProps {
   tickets: iTickets[];
   isLoading?: boolean;
+  vertical?: boolean;
 }
 
-const BestSellersCarousel: React.FC<iProps> = ({ tickets, isLoading }) => {
+const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
   if (isLoading) {
     return <p className="mt-5 text-gray_6">Carregando...</p>;
   }
@@ -22,11 +23,19 @@ const BestSellersCarousel: React.FC<iProps> = ({ tickets, isLoading }) => {
   }
 
   return (
-    <ul className="mt-5 flex gap-5 overflow-x-auto lg:max-w-[1320px] lg:flex-row lg:overflow-x-scroll lg:flex-nowrap sm:flex-col ml-5">
+    <ul
+      className={`mt-5 flex gap-5 pr-5 ${
+        vertical
+          ? "flex-col max-h-[800px] overflow-y-auto"
+          : "overflow-x-auto flex-row lg:max-w-[1320px] lg:overflow-x-scroll"
+      } ml-5`}
+    >
       {tickets.map((ticket) => (
         <li
           key={ticket.id}
-          className="flex-1 min-w-[300px] p-4 bg-gray_1 shadow-md rounded-lg"
+          className={`flex-shrink-0 w-full p-4 bg-gray_1 shadow-md rounded-lg ${
+            vertical ? "" : "max-w-[400px]"
+          }`}
         >
           <div className="p-4">
             <h3 className="text-lg font-bold">{ticket.name}</h3>
@@ -47,4 +56,4 @@ const BestSellersCarousel: React.FC<iProps> = ({ tickets, isLoading }) => {
   );
 };
 
-export default BestSellersCarousel;
+export default TicketsList;

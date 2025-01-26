@@ -3,7 +3,7 @@
 import React from "react";
 import SectionTitle from "@/components/atoms/Title/SectionTitle";
 import { iTickets } from "@/interfaces/iTickets";
-import BestSellersCarousel from "@/components/atoms/BestSellersCarousel";
+import TicketsList from "@/components/atoms/TicketsList";
 
 interface iProps {
   tickets: iTickets[];
@@ -23,7 +23,7 @@ const BestSellersSection: React.FC<iProps> = ({ tickets, isLoading }) => {
         </div>
 
         <div className="flex flex-row justify-center">
-          <BestSellersCarousel tickets={tickets} isLoading={isLoading} />
+          <TicketsList tickets={tickets} isLoading={isLoading} />
         </div>
       </div>
     </div>
