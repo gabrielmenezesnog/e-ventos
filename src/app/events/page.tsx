@@ -1,5 +1,5 @@
 import PageHeader from "@/components/atoms/PageTitle";
-import TicketsList from "@/components/atoms/TicketsList";
+import EventListSection from "@/components/molecules/EventListSection";
 import { getTickets } from "@/services/tickets/getTickets";
 
 export default async function EventsPage() {
@@ -14,7 +14,7 @@ export default async function EventsPage() {
 
       <div className="my-14">
         <div className="container">
-          <TicketsList tickets={tickets} isLoading={isLoading} vertical />
+          <EventListSection tickets={tickets} isLoading={isLoading} />
         </div>
       </div>
     </div>
