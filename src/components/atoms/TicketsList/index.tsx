@@ -4,6 +4,7 @@ import React from "react";
 import { iTickets } from "@/interfaces/iTickets";
 import Link from "next/link";
 import Image from "next/image";
+import Loading from "../Loading";
 
 interface iProps {
   tickets: iTickets[];
@@ -13,7 +14,7 @@ interface iProps {
 
 const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
   if (isLoading) {
-    return <p className="mt-5 text-gray_6">Carregando...</p>;
+    return <Loading />;
   }
 
   if (tickets.length === 0) {
