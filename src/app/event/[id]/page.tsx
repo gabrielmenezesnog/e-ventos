@@ -1,4 +1,5 @@
 import PageHeader from "@/components/atoms/PageTitle";
+import EventBuySection from "@/components/molecules/EventBuySection";
 import { iTickets } from "@/interfaces/iTickets";
 import { getTicket } from "@/services/tickets/getTicket";
 
@@ -27,6 +28,8 @@ const EventPage = async ({ params }: EventPageProps) => {
         title={ticket.name}
         subtitle={`R$ ${ticket.price.toFixed(2)}`}
       />
+
+      <EventBuySection ticket={ticket} />
     </div>
   );
 };
