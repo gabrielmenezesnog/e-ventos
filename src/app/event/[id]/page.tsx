@@ -26,7 +26,7 @@ const EventPage = async ({ params }: EventPageProps) => {
     <div>
       <PageHeader
         title={ticket.name}
-        subtitle={`R$ ${ticket.price.toFixed(2)}`}
+        subtitle={`R$ ${ticket.price.toFixed(2)} | PISTA`}
       />
 
       <EventBuySection ticket={ticket} />
