@@ -4,284 +4,480 @@
     {
       "id": 1,
       "name": "Pearl Jam",
-      "description": "Um show de rock incrível para quem gosta de música boa",
+      "description": "Uma apresentação épica da lendária banda de rock Pearl Jam, trazendo seus maiores sucessos em uma noite inesquecível.",
       "date": "2025-03-15T20:00:00",
       "local": "Estádio Joaquim Américo Guimarães",
-      "price": 150.0,
-      "sold_quantity": 800,
-      "available_quantity": 200,
+      "price": 200,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 250,
+          "available_quantity": 100,
+          "sold_quantity": 100
+        },
+        {
+          "type": "Pista",
+          "price": 200,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "Meia",
+          "price": 150,
+          "available_quantity": 100,
+          "sold_quantity": 200
+        }
+      ],
       "total_tickets": 1000,
+      "sold_quantity": 600,
+      "available_quantity": 400,
       "image_url": "https://cdn-images.dzcdn.net/images/artist/3e279f4e0269fdb2733474ddfa074a91/500x500.jpg"
     },
     {
       "id": 2,
-      "name": "Taylor Swift",
-      "description": "A Eras Tour chegando com um espetáculo cheio de hits",
-      "date": "2025-04-05T21:00:00",
+      "name": "Foo Fighters",
+      "description": "Show eletrizante do Foo Fighters, repleto de energia e clássicos do rock.",
+      "date": "2025-04-20T21:00:00",
       "local": "Allianz Parque",
-      "price": 350.0,
-      "sold_quantity": 1800,
-      "available_quantity": 200,
-      "total_tickets": 2000,
-      "image_url": "https://static.billboard.com/files/2022/12/taylor-swift-2022-cr-Beth-Garrabrant-billboard-1548-1670590168.jpg"
+      "price": 220,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 270,
+          "available_quantity": 120,
+          "sold_quantity": 80
+        },
+        {
+          "type": "Pista",
+          "price": 220,
+          "available_quantity": 250,
+          "sold_quantity": 350
+        },
+        {
+          "type": "Meia",
+          "price": 170,
+          "available_quantity": 130,
+          "sold_quantity": 170
+        }
+      ],
+      "total_tickets": 1100,
+      "sold_quantity": 600,
+      "available_quantity": 500,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/bb24a51b384a15b1b9e8f9617793e458/500x500.jpg"
     },
     {
       "id": 3,
-      "name": "Coldplay",
-      "description": "Um show inesquecível com luzes e músicas incríveis",
-      "date": "2025-05-10T19:00:00",
-      "local": "Maracanã",
-      "price": 400.0,
-      "sold_quantity": 2500,
+      "name": "Red Hot Chili Peppers",
+      "description": "A lendária banda californiana traz sua mistura única de rock e funk para um show inesquecível.",
+      "date": "2025-05-10T19:30:00",
+      "local": "Morumbi Stadium",
+      "price": 230,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 280,
+          "available_quantity": 150,
+          "sold_quantity": 150
+        },
+        {
+          "type": "Pista",
+          "price": 230,
+          "available_quantity": 300,
+          "sold_quantity": 400
+        },
+        {
+          "type": "Meia",
+          "price": 180,
+          "available_quantity": 200,
+          "sold_quantity": 250
+        }
+      ],
+      "total_tickets": 1300,
+      "sold_quantity": 800,
       "available_quantity": 500,
-      "total_tickets": 3000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Coldplay_2017_%28cropped%29.jpg"
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/1f807c8a8a9c4f98eebd38a3f6431d34/500x500.jpg"
     },
     {
       "id": 4,
-      "name": "Ed Sheeran",
-      "description": "Turnê Mathematics com clássicos e novas músicas",
-      "date": "2025-06-20T20:30:00",
-      "local": "Mineirão",
-      "price": 250.0,
-      "sold_quantity": 1500,
+      "name": "Metallica",
+      "description": "O peso do heavy metal com a potência do Metallica, em um show histórico.",
+      "date": "2025-06-18T20:30:00",
+      "local": "Arena Corinthians",
+      "price": 250,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 300,
+          "available_quantity": 100,
+          "sold_quantity": 200
+        },
+        {
+          "type": "Pista",
+          "price": 250,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "Meia",
+          "price": 200,
+          "available_quantity": 100,
+          "sold_quantity": 200
+        }
+      ],
+      "total_tickets": 1200,
+      "sold_quantity": 700,
       "available_quantity": 500,
-      "total_tickets": 2000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Ed_Sheeran_2013.jpg"
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/7bdbc52f9c1e80751c91e2f40e0d3a3f/500x500.jpg"
     },
     {
       "id": 5,
-      "name": "Metallica",
-      "description": "Clássicos do metal em uma noite para nunca esquecer",
-      "date": "2025-07-15T21:00:00",
-      "local": "Arena da Baixada",
-      "price": 300.0,
+      "name": "Coldplay",
+      "description": "A banda britânica Coldplay traz sua turnê mundial para um show emocionante e cheio de efeitos visuais.",
+      "date": "2025-07-25T20:00:00",
+      "local": "Maracanã",
+      "price": 280,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 350,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "Pista",
+          "price": 280,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "Meia",
+          "price": 220,
+          "available_quantity": 250,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1500,
       "sold_quantity": 1200,
       "available_quantity": 300,
-      "total_tickets": 1500,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Metallica_at_The_O2_in_London_2008.jpg"
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/2d5dce366c824705bc216f0a3b68cd13/500x500.jpg"
     },
     {
       "id": 6,
-      "name": "Billie Eilish",
-      "description": "O show mais aguardado da popstar do momento",
-      "date": "2025-08-05T20:00:00",
-      "local": "Jeunesse Arena",
-      "price": 275.0,
-      "sold_quantity": 1700,
-      "available_quantity": 300,
-      "total_tickets": 2000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Billie_Eilish_at_Pukkelpop_2019_%28cropped%29.jpg"
+      "name": "The Weeknd",
+      "description": "Uma noite inesquecível com The Weeknd, repleta de hits e performances envolventes.",
+      "date": "2025-08-15T21:00:00",
+      "local": "Mineirão",
+      "price": 260,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 320,
+          "available_quantity": 180,
+          "sold_quantity": 200
+        },
+        {
+          "type": "Pista",
+          "price": 260,
+          "available_quantity": 350,
+          "sold_quantity": 450
+        },
+        {
+          "type": "Meia",
+          "price": 200,
+          "available_quantity": 200,
+          "sold_quantity": 250
+        }
+      ],
+      "total_tickets": 1400,
+      "sold_quantity": 900,
+      "available_quantity": 500,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/b4c0080a223e4d6784b36c4a1a3e058b/500x500.jpg"
     },
     {
       "id": 7,
-      "name": "U2",
-      "description": "A lendária banda retorna para mais uma turnê épica",
-      "date": "2025-09-01T19:30:00",
-      "local": "Morumbi",
-      "price": 350.0,
-      "sold_quantity": 3000,
-      "available_quantity": 500,
-      "total_tickets": 3500,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/U2_360_at_Cowboys_Stadium.jpg"
+      "name": "Ed Sheeran",
+      "description": "O cantor e compositor britânico traz seus sucessos românticos para uma noite memorável.",
+      "date": "2025-09-10T20:30:00",
+      "local": "Estádio Beira-Rio",
+      "price": 240,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 300,
+          "available_quantity": 180,
+          "sold_quantity": 250
+        },
+        {
+          "type": "Pista",
+          "price": 240,
+          "available_quantity": 350,
+          "sold_quantity": 400
+        },
+        {
+          "type": "Meia",
+          "price": 190,
+          "available_quantity": 200,
+          "sold_quantity": 250
+        }
+      ]
     },
     {
       "id": 8,
-      "name": "Rihanna",
-      "description": "O retorno mais aguardado ao palco principal",
-      "date": "2025-10-10T21:00:00",
-      "local": "Beira-Rio",
-      "price": 400.0,
-      "sold_quantity": 2200,
-      "available_quantity": 300,
-      "total_tickets": 2500,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Rihanna_2018_%28cropped%29.jpg"
+      "name": "Adele",
+      "description": "A poderosa voz de Adele em uma apresentação intimista e emocionante.",
+      "date": "2025-10-05T19:00:00",
+      "local": "Jeunesse Arena",
+      "price": 300,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 380,
+          "available_quantity": 150,
+          "sold_quantity": 250
+        },
+        {
+          "type": "Pista",
+          "price": 300,
+          "available_quantity": 300,
+          "sold_quantity": 450
+        },
+        {
+          "type": "Meia",
+          "price": 240,
+          "available_quantity": 180,
+          "sold_quantity": 220
+        }
+      ],
+      "total_tickets": 1200,
+      "sold_quantity": 920,
+      "available_quantity": 280,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/b6c7bb10dfac4e1e926e1a3493c0a1ef/500x500.jpg"
     },
     {
       "id": 9,
-      "name": "Shakira",
-      "description": "Show repleto de sucessos e coreografias incríveis",
-      "date": "2025-11-20T20:00:00",
-      "local": "Arena Fonte Nova",
-      "price": 320.0,
-      "sold_quantity": 1800,
-      "available_quantity": 200,
-      "total_tickets": 2000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Shakira_-_Rock_in_Rio_Madrid_2010.jpg"
+      "name": "Bruno Mars",
+      "description": "Um show cheio de energia e carisma com os maiores sucessos de Bruno Mars.",
+      "date": "2025-11-20T21:00:00",
+      "local": "Estádio Nilton Santos",
+      "price": 270,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 350,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "Pista",
+          "price": 270,
+          "available_quantity": 400,
+          "sold_quantity": 500
+        },
+        {
+          "type": "Meia",
+          "price": 210,
+          "available_quantity": 250,
+          "sold_quantity": 250
+        }
+      ],
+      "total_tickets": 1400,
+      "sold_quantity": 1050,
+      "available_quantity": 350,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/4c6ff6fb13e84c939ba7dc945b8d63b2/500x500.jpg"
     },
     {
       "id": 10,
-      "name": "Adele",
-      "description": "Um show emocionante com a poderosa voz de Adele",
-      "date": "2025-12-15T20:30:00",
-      "local": "Maracanã",
-      "price": 500.0,
-      "sold_quantity": 2800,
-      "available_quantity": 200,
-      "total_tickets": 3000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Adele_Live_2016.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Red Hot Chili Peppers",
-      "description": "Energia pura com a icônica banda de rock",
-      "date": "2025-03-30T20:00:00",
-      "local": "Arena Pernambuco",
-      "price": 250.0,
-      "sold_quantity": 1600,
-      "available_quantity": 400,
-      "total_tickets": 2000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Red_Hot_Chili_Peppers_2012.jpg"
-    },
-    {
-      "id": 12,
-      "name": "Beyoncé",
-      "description": "Turnê Renaissance: um espetáculo visual e sonoro",
-      "date": "2025-04-25T20:00:00",
-      "local": "Allianz Parque",
-      "price": 550.0,
-      "sold_quantity": 4000,
-      "available_quantity": 500,
-      "total_tickets": 4500,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Beyonce_%28cropped%29.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Bruno Mars",
-      "description": "Hits dançantes e carisma em uma noite única",
-      "date": "2025-05-20T21:00:00",
-      "local": "Arena das Dunas",
-      "price": 300.0,
-      "sold_quantity": 2000,
-      "available_quantity": 300,
-      "total_tickets": 2300,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Bruno_Mars%2C_2017.jpg"
-    },
-    {
-      "id": 14,
-      "name": "The Weeknd",
-      "description": "Show de luzes e música inesquecível",
-      "date": "2025-06-15T20:00:00",
-      "local": "Jeunesse Arena",
-      "price": 380.0,
-      "sold_quantity": 2800,
-      "available_quantity": 200,
-      "total_tickets": 3000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/The_Weeknd_2018_%28cropped%29.jpg"
-    },
-    {
-      "id": 15,
-      "name": "Imagine Dragons",
-      "description": "Show repleto de energia e emoção",
-      "date": "2025-07-30T19:30:00",
-      "local": "Arena Pantanal",
-      "price": 320.0,
-      "sold_quantity": 2400,
-      "available_quantity": 100,
-      "total_tickets": 2500,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Imagine_Dragons_in_2018.jpg"
-    },
-    {
-      "id": 16,
-      "name": "Ariana Grande",
-      "description": "Uma noite cheia de sucessos pop e emoção",
-      "date": "2025-08-18T20:00:00",
-      "local": "Beira-Rio",
-      "price": 400.0,
-      "sold_quantity": 2600,
-      "available_quantity": 400,
-      "total_tickets": 3000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Ariana_Grande_in_2017.jpg"
-    },
-    {
-      "id": 17,
-      "name": "Drake",
-      "description": "Um show poderoso com hits do rap e R&B",
-      "date": "2025-09-25T21:00:00",
-      "local": "Maracanã",
-      "price": 420.0,
-      "sold_quantity": 3500,
-      "available_quantity": 500,
-      "total_tickets": 4000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Drake_at_Wireless_Festival_2012_%28cropped%29.jpg"
-    },
-    {
-      "id": 18,
-      "name": "Foo Fighters",
-      "description": "Rock clássico e muita energia no palco",
-      "date": "2025-10-10T20:30:00",
-      "local": "Morumbi",
-      "price": 350.0,
-      "sold_quantity": 2000,
-      "available_quantity": 300,
-      "total_tickets": 2300,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Foo_Fighters_-_Rock_am_Ring_2018.jpg"
-    },
-    {
-      "id": 19,
-      "name": "Harry Styles",
-      "description": "O show mais aguardado pelos fãs do pop mundial",
-      "date": "2025-11-05T21:00:00",
-      "local": "Mineirão",
-      "price": 480.0,
-      "sold_quantity": 4000,
-      "available_quantity": 500,
-      "total_tickets": 4500,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Harry_Styles_Love_On_Tour_2022.jpg"
-    },
-    {
-      "id": 20,
-      "name": "Post Malone",
-      "description": "Show repleto de hits e carisma",
-      "date": "2025-12-20T20:30:00",
-      "local": "Allianz Parque",
-      "price": 300.0,
-      "sold_quantity": 1900,
-      "available_quantity": 100,
-      "total_tickets": 2000,
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Post_Malone_Stavernfestivalen_2018_%28cropped%29.jpg"
+      "name": "Taylor Swift",
+      "description": "Uma experiência única com Taylor Swift, repleta de hits e performances icônicas.",
+      "date": "2025-12-15T20:00:00",
+      "local": "Morumbi Stadium",
+      "price": 320,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 400,
+          "available_quantity": 150,
+          "sold_quantity": 250
+        },
+        {
+          "type": "Pista",
+          "price": 320,
+          "available_quantity": 300,
+          "sold_quantity": 450
+        },
+        {
+          "type": "Meia",
+          "price": 260,
+          "available_quantity": 180,
+          "sold_quantity": 220
+        }
+      ],
+      "total_tickets": 1300,
+      "sold_quantity": 920,
+      "available_quantity": 380,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/8f93c2e876e3476fa7b8a0f65d7a42a1/500x500.jpg"
     }
   ],
   "best_sellers": [
     {
-      "id": 12,
-      "name": "Beyoncé",
-      "local": "Allianz Parque",
-      "price": 550.0,
-      "sold_quantity": 4000,
-      "date": "2025-04-25T20:00:00"
+      "id": 3,
+      "name": "Red Hot Chili Peppers",
+      "description": "A lendária banda californiana traz sua mistura única de rock e funk para um show inesquecível.",
+      "date": "2025-05-10T19:30:00",
+      "local": "Morumbi Stadium",
+      "price": 230,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 280,
+          "available_quantity": 150,
+          "sold_quantity": 150
+        },
+        {
+          "type": "Pista",
+          "price": 230,
+          "available_quantity": 300,
+          "sold_quantity": 400
+        },
+        {
+          "type": "Meia",
+          "price": 180,
+          "available_quantity": 200,
+          "sold_quantity": 250
+        }
+      ],
+      "total_tickets": 1300,
+      "sold_quantity": 800,
+      "available_quantity": 500,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/1f807c8a8a9c4f98eebd38a3f6431d34/500x500.jpg"
     },
     {
-      "id": 19,
-      "name": "Harry Styles",
-      "local": "Mineirão",
-      "price": 480.0,
-      "sold_quantity": 4000,
-      "date": "2025-11-05T21:00:00"
-    },
-    {
-      "id": 17,
-      "name": "Drake",
+      "id": 5,
+      "name": "Coldplay",
+      "description": "A banda britânica Coldplay traz sua turnê mundial para um show emocionante e cheio de efeitos visuais.",
+      "date": "2025-07-25T20:00:00",
       "local": "Maracanã",
-      "price": 420.0,
-      "sold_quantity": 3500,
-      "date": "2025-09-25T21:00:00"
+      "price": 280,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 350,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "Pista",
+          "price": 280,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "Meia",
+          "price": 220,
+          "available_quantity": 250,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1500,
+      "sold_quantity": 1200,
+      "available_quantity": 300,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/2d5dce366c824705bc216f0a3b68cd13/500x500.jpg"
     },
     {
       "id": 7,
-      "name": "U2",
-      "local": "Morumbi",
-      "price": 350.0,
-      "sold_quantity": 3000,
-      "date": "2025-09-01T19:30:00"
+      "name": "Ed Sheeran",
+      "description": "O cantor e compositor britânico traz seus sucessos românticos para uma noite memorável.",
+      "date": "2025-09-10T20:30:00",
+      "local": "Estádio Beira-Rio",
+      "price": 240,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 300,
+          "available_quantity": 180,
+          "sold_quantity": 250
+        },
+        {
+          "type": "Pista",
+          "price": 240,
+          "available_quantity": 350,
+          "sold_quantity": 400
+        },
+        {
+          "type": "Meia",
+          "price": 190,
+          "available_quantity": 200,
+          "sold_quantity": 250
+        }
+      ],
+      "total_tickets": 1300,
+      "sold_quantity": 900,
+      "available_quantity": 400,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/7a7f3e2e74c648429bcc2dff7c3ffadf/500x500.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Bruno Mars",
+      "description": "Um show cheio de energia e carisma com os maiores sucessos de Bruno Mars.",
+      "date": "2025-11-20T21:00:00",
+      "local": "Estádio Nilton Santos",
+      "price": 270,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 350,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "Pista",
+          "price": 270,
+          "available_quantity": 400,
+          "sold_quantity": 500
+        },
+        {
+          "type": "Meia",
+          "price": 210,
+          "available_quantity": 250,
+          "sold_quantity": 250
+        }
+      ],
+      "total_tickets": 1400,
+      "sold_quantity": 1050,
+      "available_quantity": 350,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/4c6ff6fb13e84c939ba7dc945b8d63b2/500x500.jpg"
     },
     {
       "id": 10,
-      "name": "Adele",
-      "local": "Maracanã",
-      "price": 500.0,
-      "sold_quantity": 2800,
-      "date": "2025-12-15T20:30:00"
+      "name": "Taylor Swift",
+      "description": "Uma experiência única com Taylor Swift, repleta de hits e performances icônicas.",
+      "date": "2025-12-15T20:00:00",
+      "local": "Morumbi Stadium",
+      "price": 320,
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 400,
+          "available_quantity": 150,
+          "sold_quantity": 250
+        },
+        {
+          "type": "Pista",
+          "price": 320,
+          "available_quantity": 300,
+          "sold_quantity": 450
+        },
+        {
+          "type": "Meia",
+          "price": 260,
+          "available_quantity": 180,
+          "sold_quantity": 220
+        }
+      ],
+      "total_tickets": 1300,
+      "sold_quantity": 920,
+      "available_quantity": 380,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/8f93c2e876e3476fa7b8a0f65d7a42a1/500x500.jpg"
     }
   ]
 }
