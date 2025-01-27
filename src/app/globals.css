@@ -162,6 +162,26 @@ button:disabled {
   text-transform: uppercase;
 }
 
+.sub_button {
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: 0.1s;
+  background: var(--black);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sub_button:hover,
+.selected {
+  background: var(--white);
+  color: var(--black);
+}
+
 hr {
   border: 2px solid #eee;
   margin: 2rem auto;
