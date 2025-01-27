@@ -123,17 +123,26 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                   QUANTIDADE
                 </h3>
 
-                <div className="max-w-28">
-                  <Input
-                    type="number"
-                    value={ticketQuantity}
-                    onChange={(e) => handleSelectTicket(e.target.value)}
-                  />
+                <div className="flex flex-row items-center gap-3">
+                  <div className="max-w-28">
+                    <Input
+                      type="number"
+                      value={ticketQuantity}
+                      onChange={(e) => handleSelectTicket(e.target.value)}
+                    />
+                  </div>
+
+                  <button
+                    className="font-medium bg-gray_6 text-gray_11"
+                    onClick={handleAddToCart}
+                  >
+                    SELECIONAR
+                  </button>
                 </div>
               </div>
 
               {selectedTickets.length > 0 && (
-                <div className="mb-8">
+                <div className="mb-3">
                   <div className="mb-5">
                     <h3 className="text-xs font-semibold mb-4 text-white">
                       INGRESSOS SELECIONADOS
@@ -157,7 +166,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                     </ul>
                   </div>
 
-                  <div>
+                  <div className="mb-5">
                     <h3 className="text-xs font-semibold mb-4 text-white">
                       VALOR TOTAL
                     </h3>
@@ -166,15 +175,15 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                       {`R$ ${ticketTotalValue().toFixed(2)}`}
                     </p>
                   </div>
+
+                  <button
+                    className="font-medium text-white"
+                    onClick={handleAddToCart}
+                  >
+                    IR PARA O CARRINHO
+                  </button>
                 </div>
               )}
-
-              <button
-                className="font-medium text-white"
-                onClick={handleAddToCart}
-              >
-                SELECIONAR INGRESSOS
-              </button>
             </div>
 
             <div>

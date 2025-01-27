@@ -24,7 +24,7 @@ const Input = ({
   min = 0,
 }: iProps) => {
   const baseClass =
-    "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400";
+    "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 mb-0";
 
   return (
     <div className="space-y-1">
