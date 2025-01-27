@@ -16,13 +16,13 @@
           "sold_quantity": 100
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 200,
           "available_quantity": 200,
           "sold_quantity": 300
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 150,
           "available_quantity": 100,
           "sold_quantity": 200
@@ -48,13 +48,13 @@
           "sold_quantity": 80
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 220,
           "available_quantity": 250,
           "sold_quantity": 350
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 170,
           "available_quantity": 130,
           "sold_quantity": 170
@@ -80,13 +80,13 @@
           "sold_quantity": 150
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 230,
           "available_quantity": 300,
           "sold_quantity": 400
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 180,
           "available_quantity": 200,
           "sold_quantity": 250
@@ -112,13 +112,13 @@
           "sold_quantity": 200
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 250,
           "available_quantity": 200,
           "sold_quantity": 300
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 200,
           "available_quantity": 100,
           "sold_quantity": 200
@@ -144,13 +144,13 @@
           "sold_quantity": 300
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 280,
           "available_quantity": 400,
           "sold_quantity": 600
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 220,
           "available_quantity": 250,
           "sold_quantity": 300
@@ -176,13 +176,13 @@
           "sold_quantity": 200
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 260,
           "available_quantity": 350,
           "sold_quantity": 450
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 200,
           "available_quantity": 200,
           "sold_quantity": 250
@@ -208,13 +208,13 @@
           "sold_quantity": 250
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 240,
           "available_quantity": 350,
           "sold_quantity": 400
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 190,
           "available_quantity": 200,
           "sold_quantity": 250
@@ -236,13 +236,13 @@
           "sold_quantity": 250
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 300,
           "available_quantity": 300,
           "sold_quantity": 450
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 240,
           "available_quantity": 180,
           "sold_quantity": 220
@@ -268,13 +268,13 @@
           "sold_quantity": 300
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 270,
           "available_quantity": 400,
           "sold_quantity": 500
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 210,
           "available_quantity": 250,
           "sold_quantity": 250
@@ -300,13 +300,13 @@
           "sold_quantity": 250
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 320,
           "available_quantity": 300,
           "sold_quantity": 450
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 260,
           "available_quantity": 180,
           "sold_quantity": 220
@@ -334,13 +334,13 @@
           "sold_quantity": 150
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 230,
           "available_quantity": 300,
           "sold_quantity": 400
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 180,
           "available_quantity": 200,
           "sold_quantity": 250
@@ -366,13 +366,13 @@
           "sold_quantity": 300
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 280,
           "available_quantity": 400,
           "sold_quantity": 600
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 220,
           "available_quantity": 250,
           "sold_quantity": 300
@@ -398,13 +398,13 @@
           "sold_quantity": 250
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 240,
           "available_quantity": 350,
           "sold_quantity": 400
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 190,
           "available_quantity": 200,
           "sold_quantity": 250
@@ -430,13 +430,13 @@
           "sold_quantity": 300
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 270,
           "available_quantity": 400,
           "sold_quantity": 500
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 210,
           "available_quantity": 250,
           "sold_quantity": 250
@@ -462,13 +462,13 @@
           "sold_quantity": 250
         },
         {
-          "type": "Pista",
+          "type": "PISTA",
           "price": 320,
           "available_quantity": 300,
           "sold_quantity": 450
         },
         {
-          "type": "Meia",
+          "type": "MEIA",
           "price": 260,
           "available_quantity": 180,
           "sold_quantity": 220
