@@ -1,15 +1,16 @@
 import React from "react";
 
 interface iProps {
-  id: string;
-  label: string;
   type: "text" | "date" | "number" | "select";
-  value: string;
+  value: string | number | null;
   onChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => void;
+  id?: string;
+  label?: string;
   options?: string[];
   className?: string;
+  min?: number;
 }
 
 const Input = ({
@@ -20,20 +21,23 @@ const Input = ({
   onChange,
   options,
   className,
+  min = 0,
 }: iProps) => {
   const baseClass =
     "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400";
 
   return (
     <div className="space-y-1">
-      <label htmlFor={id} className="block text-sm font-medium text-gray-700">
-        {label}
-      </label>
+      {label && (
+        <label htmlFor={id} className="block text-sm font-medium text-gray-700">
+          {label}
+        </label>
+      )}
 
       {type === "select" ? (
         <select
           id={id}
-          value={value}
+          value={value || ""}
           onChange={onChange}
           className={`${baseClass} h-[45px] ${className || ""}`}
         >
@@ -48,11 +52,12 @@ const Input = ({
         <input
           type={type}
           id={id}
-          value={value}
+          value={value || ""}
           onChange={onChange}
           placeholder={type === "date" ? "DD/MM/YYYY" : undefined}
           pattern={type === "date" ? "\\d{2}/\\d{2}/\\d{4}" : undefined}
           className={`${baseClass} h-[45px] ${className || ""}`}
+          min={min}
         />
       )}
     </div>
