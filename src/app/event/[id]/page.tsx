@@ -1,3 +1,5 @@
+import PageHeader from "@/components/atoms/PageTitle";
+import { iTickets } from "@/interfaces/iTickets";
 import { getTicket } from "@/services/tickets/getTicket";
 
 interface EventPageProps {
@@ -9,7 +11,7 @@ interface EventPageProps {
 const EventPage = async ({ params }: EventPageProps) => {
   const { id } = await params;
 
-  const ticket = await getTicket(id);
+  const ticket: iTickets = await getTicket(id);
 
   if (!ticket) {
     return (
@@ -20,10 +22,11 @@ const EventPage = async ({ params }: EventPageProps) => {
   }
 
   return (
-    <div className="p-5">
-      <h1 className="text-2xl font-bold">Ticket ID: {ticket.id}</h1>
-      <p className="text-lg">Nome: {ticket.name}</p>
-      <p className="text-lg">Descrição: {ticket.description}</p>
+    <div>
+      <PageHeader
+        title={ticket.name}
+        subtitle={`R$ ${ticket.price.toFixed(2)}`}
+      />
     </div>
   );
 };

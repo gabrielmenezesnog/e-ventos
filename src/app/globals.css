@@ -148,6 +148,20 @@ button:disabled {
   cursor: wait;
 }
 
+.icon_button {
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: 0.1s;
+  background: transparent;
+  color: var(--black);
+  padding: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 hr {
   border: 2px solid #eee;
   margin: 2rem auto;
