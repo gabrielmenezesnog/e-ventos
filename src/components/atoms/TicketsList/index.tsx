@@ -3,7 +3,6 @@
 import React from "react";
 import { iTickets } from "@/interfaces/iTickets";
 import Link from "next/link";
-import Image from "next/image";
 import Loading from "../Loading";
 
 interface iProps {
@@ -63,16 +62,6 @@ const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
             <div className="flex flex-row items-center gap-2 mt-6">
               <button className="bg-primary text-white font-semibold">
                 <Link href={`/event/${ticket.id}`}>Comprar</Link>
-              </button>
-
-              <button className="bg-gray_5 text-black font-semibold flex items-center justify-center gap-1">
-                <span>+</span>
-                <Image
-                  src="/images/shopping_cart.svg"
-                  alt="Adicionar ao Carrinho"
-                  width={20}
-                  height={20}
-                />
               </button>
             </div>
           </div>
