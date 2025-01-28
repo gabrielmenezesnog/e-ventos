@@ -11,6 +11,7 @@ interface EventsFilterProps {
 }
 
 const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
+  const [name, setName] = useState<string>("");
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
   const [location, setLocation] = useState<string>("");
@@ -24,6 +25,11 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
   const filterTickets = () => {
     let filtered = tickets;
 
+    if (name) {
+      filtered = filtered.filter((ticket) =>
+        ticket.name.toLowerCase().includes(name.toLowerCase())
+      );
+    }
     if (startDate) {
       filtered = filtered.filter(
         (ticket) => new Date(ticket.date) >= new Date(startDate)
@@ -54,6 +60,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
   };
 
   const resetFilters = () => {
+    setName("");
     setStartDate("");
     setEndDate("");
     setLocation("");
@@ -64,7 +71,17 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
 
   return (
     <div className="flex flex-col gap-4 mb-8">
-      <div className="flex flex-wrap gap-4">
+      <div className="flex flex-wrap gap-2">
+        <div className="w-full sm:w-auto">
+          <Input
+            id="name"
+            label="Nome"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+
         <div className="w-full sm:w-auto">
           <Input
             id="startDate"
@@ -85,7 +102,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
           />
         </div>
 
-        <div className="w-full sm:w-auto">
+        <div className="w-full sm:w-auto -mt-1">
           <Input
             id="location"
             label="Local"
@@ -115,15 +132,15 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
             onChange={(e) => setMaxPrice(e.target.value)}
           />
         </div>
+      </div>
 
-        <div className="flex flex-row items-center gap-4">
-          <Button type="default" label="Filtrar" onClick={filterTickets} />
-          <Button
-            type="secondary"
-            label="Limpar Filtros"
-            onClick={resetFilters}
-          />
-        </div>
+      <div className="flex flex-row items-center gap-4">
+        <Button type="default" label="Filtrar" onClick={filterTickets} />
+        <Button
+          type="secondary"
+          label="Limpar Filtros"
+          onClick={resetFilters}
+        />
       </div>
     </div>
   );
