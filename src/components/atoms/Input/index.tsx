@@ -11,6 +11,7 @@ interface iProps {
   options?: string[];
   className?: string;
   min?: number;
+  max?: number | null;
 }
 
 const Input = ({
@@ -22,6 +23,7 @@ const Input = ({
   options,
   className,
   min = 0,
+  max = 5,
 }: iProps) => {
   const baseClass =
     "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 mb-0";
@@ -58,6 +60,7 @@ const Input = ({
           pattern={type === "date" ? "\\d{2}/\\d{2}/\\d{4}" : undefined}
           className={`${baseClass} h-[45px] ${className || ""}`}
           min={min}
+          max={max || undefined}
         />
       )}
     </div>
