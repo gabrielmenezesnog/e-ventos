@@ -118,10 +118,8 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
         );
 
         if (existingTicketIndex !== -1) {
-          // Atualiza a quantidade do ticket existente
           updatedTickets[existingTicketIndex].quantity = newTicket.quantity;
         } else {
-          // Adiciona o novo ticket se não existir ainda
           updatedTickets.push(newTicket);
         }
       });

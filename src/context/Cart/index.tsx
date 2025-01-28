@@ -25,8 +25,11 @@ export function CartDrawerProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [cartTickets, setCartTickets] = useState<iCartTicket[]>(() => {
-    const storedCart = sessionStorage.getItem("cartTickets");
-    return storedCart ? JSON.parse(storedCart) : [];
+    if (typeof window !== "undefined") {
+      const storedCart = sessionStorage.getItem("cartTickets");
+      return storedCart ? JSON.parse(storedCart) : [];
+    }
+    return [];
   });
 
   useEffect(() => {
