@@ -1,7 +1,7 @@
 import React from "react";
 
 interface iProps {
-  type: "text" | "date" | "number" | "select";
+  type: "text" | "date" | "number" | "select" | "password";
   value: string | number | null;
   onChange: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
