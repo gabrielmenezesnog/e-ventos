@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useState, useCallback } from "react";
@@ -5,6 +6,9 @@ import { iTickets } from "@/interfaces/iTickets";
 import Loading from "@/components/atoms/Loading";
 import Image from "next/image";
 import Input from "@/components/atoms/Input";
+import { useCartDrawer } from "@/context/Cart";
+import { iCartTicket } from "@/interfaces/iCartTicket";
+import TicketTypeList from "@/components/atoms/TicketTypeList";
 
 interface iProps {
   ticket: iTickets;
@@ -12,38 +16,71 @@ interface iProps {
 }
 
 const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
-  const [ticketType, setTicketType] = useState("PISTA");
+  const [ticketType, setTicketType] = useState("");
+  const [selectedTicket, setSelectedTicket] = useState<any>(null);
   const [ticketQuantity, setTicketQuantity] = useState<number | null>(1);
-  const [selectedTickets, setSelectedTickets] = useState<
-    { type: string; quantity: number }[]
-  >([]);
+  const [selectedTickets, setSelectedTickets] = useState<iCartTicket[]>([]);
   const [hasImageError, setHasImageError] = useState(false);
+
+  const { isOpen, toggleDrawer, cartTickets, setCartTickets } = useCartDrawer();
 
   const imageUrl = ticket.image_url || "/images/default-image.jpg";
 
   const handleChangeType = useCallback((type: string) => {
+    const selectedTicketType = ticket.ticket_types?.find(
+      (item) => item.type === type
+    );
+
+    setSelectedTicket(selectedTicketType);
+
     setTicketType(type);
     setTicketQuantity(1);
   }, []);
 
   const handleAddToCart = useCallback(() => {
-    if (ticketQuantity === null) return;
-    setSelectedTickets((prevTickets) => {
-      const existingTicket = prevTickets.find((t) => t.type === ticketType);
-      if (existingTicket) {
-        return prevTickets.map((t) =>
-          t.type === ticketType ? { ...t, quantity: ticketQuantity } : t
-        );
-      }
-      return [...prevTickets, { type: ticketType, quantity: ticketQuantity }];
-    });
-  }, [ticketType, ticketQuantity]);
+    const isNotAvailable =
+      selectedTicket?.available_quantity < (ticketQuantity || 1);
 
-  const handleRemoveTicket = useCallback((type: string) => {
-    setSelectedTickets((prevTickets) =>
-      prevTickets.filter((ticket) => ticket.type !== type)
+    if (ticketQuantity === null || isNotAvailable) return;
+
+    const selectedTicketType = ticket.ticket_types?.find(
+      (item) => item.type === ticketType
     );
-  }, []);
+
+    if (!selectedTicketType) return;
+
+    const index =
+      cartTickets.length > 0 ? cartTickets.length : selectedTickets.length;
+
+    const newTicket: iCartTicket = {
+      id: ticket.id,
+      index,
+      name: ticket.name,
+      price: selectedTicketType.price,
+      type: ticketType,
+      quantity: ticketQuantity,
+      total_value: selectedTicketType.price * ticketQuantity,
+      ticket_types: ticket.ticket_types,
+    };
+
+    setSelectedTickets((prevState) => {
+      const ticketIndex = prevState.findIndex((t) => t.type === ticketType);
+
+      if (ticketIndex !== -1) {
+        const updatedTickets = [...prevState];
+
+        updatedTickets[ticketIndex] = {
+          ...updatedTickets[ticketIndex],
+          quantity: ticketQuantity,
+          total_value: selectedTicketType.price * ticketQuantity,
+        };
+
+        return updatedTickets;
+      }
+
+      return [...prevState, newTicket];
+    });
+  }, [ticket, ticketType, ticketQuantity]);
 
   const handleSelectTicket = useCallback((value: string) => {
     if (value) {
@@ -70,6 +107,32 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
     }, 0);
   }, [selectedTickets, ticket.ticket_types]);
 
+  const handleGoToCart = () => {
+    setCartTickets((prevTickets) => {
+      const updatedTickets = [...prevTickets];
+
+      selectedTickets.forEach((newTicket) => {
+        const existingTicketIndex = updatedTickets.findIndex(
+          (ticket) => ticket.index === newTicket.index
+        );
+
+        if (existingTicketIndex !== -1) {
+          // Atualiza a quantidade do ticket existente
+          updatedTickets[existingTicketIndex].quantity = newTicket.quantity;
+        } else {
+          // Adiciona o novo ticket se não existir ainda
+          updatedTickets.push(newTicket);
+        }
+      });
+
+      return updatedTickets;
+    });
+
+    if (!isOpen) {
+      toggleDrawer();
+    }
+  };
+
   if (isLoading) return <Loading />;
 
   return (
@@ -93,30 +156,24 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
               <h3 className="text-xs font-semibold mb-4 text-white">
                 TIPO DO INGRESSO
               </h3>
-              <ul className="flex flex-row items-center gap-3 mb-8">
-                {ticket.ticket_types?.map(({ type }) => (
-                  <li key={type}>
-                    <button
-                      className={`sub_button ${
-                        type === ticketType ? "selected" : ""
-                      }`}
-                      onClick={() => handleChangeType(type)}
-                    >
-                      {type}
-                    </button>
-                  </li>
-                ))}
-              </ul>
 
-              <div className="mb-5">
-                <h3 className="text-xs font-semibold mb-4 text-white">
-                  VALOR DA UNIDADE
-                </h3>
+              <TicketTypeList
+                ticketTypes={ticket.ticket_types || []}
+                selectedType={ticketType}
+                onChangeType={handleChangeType}
+              />
 
-                <p className="text-lg font-medium text-gray_5">
-                  {`R$ ${getUnityPrice()}`}
-                </p>
-              </div>
+              {selectedTicket && (
+                <div className="mb-5">
+                  <h3 className="text-xs font-semibold mb-4 text-white">
+                    VALOR DA UNIDADE
+                  </h3>
+
+                  <p className="text-lg font-medium text-gray_5">
+                    {`R$ ${getUnityPrice()}`}
+                  </p>
+                </div>
+              )}
 
               <div className="mb-5">
                 <h3 className="text-xs font-semibold mb-4 text-white">
@@ -124,9 +181,10 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                 </h3>
 
                 <div className="flex flex-row items-center gap-3">
-                  <div className="max-w-28">
+                  <div className="max-w-32">
                     <Input
                       type="number"
+                      max={5}
                       value={ticketQuantity}
                       onChange={(e) => handleSelectTicket(e.target.value)}
                     />
@@ -136,9 +194,15 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                     className="font-medium bg-gray_6 text-gray_11"
                     onClick={handleAddToCart}
                   >
-                    SELECIONAR
+                    {selectedTickets.length > 0 ? "ATUALIZAR" : "SELECIONAR"}
                   </button>
                 </div>
+
+                {selectedTicket?.available_quantity < (ticketQuantity || 1) && (
+                  <p className="text-base text-red-500 mt-3">
+                    Quantidade indisponível
+                  </p>
+                )}
               </div>
 
               {selectedTickets.length > 0 && (
@@ -154,13 +218,6 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                           className="relative bg-black rounded-md px-3 py-1 pr-4 text-gray_5 w-fit"
                         >
                           <span>{`${type}: ${quantity}`}</span>
-
-                          <button
-                            className="icon_button text-white text-sm absolute right-0 top-0"
-                            onClick={() => handleRemoveTicket(type)}
-                          >
-                            x
-                          </button>
                         </li>
                       ))}
                     </ul>
@@ -178,29 +235,31 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
 
                   <button
                     className="font-medium text-white"
-                    onClick={handleAddToCart}
+                    onClick={() => handleGoToCart()}
                   >
-                    IR PARA O CARRINHO
+                    ADICIONAR AO CARRINHO
                   </button>
                 </div>
               )}
             </div>
 
-            <div>
-              <h3 className="text-xs font-semibold mb-4 text-white">
-                INFORMAÇÕES
-              </h3>
-              <div className="bg-black p-6 rounded-md shadow-sm">
-                <ul className="font-normal text-lg space-y-2 text-gray_5">
-                  <li>
-                    Data: {new Date(ticket.date).toLocaleDateString("pt-BR")}
-                  </li>
-                  <li>Local: {ticket.local}</li>
-                  <li>Vendidos: {ticket.sold_quantity}</li>
-                  <li>Restantes: {ticket.available_quantity}</li>
-                </ul>
+            {selectedTicket && (
+              <div>
+                <h3 className="text-xs font-semibold mb-4 text-white">
+                  INFORMAÇÕES
+                </h3>
+                <div className="bg-black p-6 rounded-md shadow-sm">
+                  <ul className="font-normal text-lg space-y-2 text-gray_5">
+                    <li>
+                      Data: {new Date(ticket.date).toLocaleDateString("pt-BR")}
+                    </li>
+                    <li>Local: {ticket.local}</li>
+                    <li>Vendidos: {selectedTicket.sold_quantity}</li>
+                    <li>Restantes: {selectedTicket.available_quantity}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
