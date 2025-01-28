@@ -1,5 +1,5 @@
 export interface iCartTicket {
-  id?: number;
+  id?: string;
   index: number;
   name?: string;
   price: number;
