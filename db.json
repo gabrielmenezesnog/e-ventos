@@ -1,5 +1,9 @@
 {
-  "user": {},
+  "user": {
+    "id": 1,
+    "email": "",
+    "password": ""
+  },
   "tickets": [
     {
       "id": "1",
