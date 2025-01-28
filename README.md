@@ -41,3 +41,9 @@ Este comando iniciará o front-end na porta http://localhost:3000 e o back-end m
 9. Na página de autenticação, é possível logar ou se registrar, e uma vez logado, tem acesso a finalizar uma compra;
 
 10. O carrinho e a autenticação são contextos e acessáveis de qualquer lugar do E-Ventos. O cache de ambos fica armazenado no sessionStorage.
+
+## O que pode melhorar
+
+1. Na página "eventos", o get que traz os eventos pode ser paginado ou implementado um lazy load;
+
+2. Pode ser adicionado um botão "carrinho" diretamente no card do evento, sem necessidade de entrar na página de compra;
