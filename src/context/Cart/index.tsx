@@ -1,7 +1,13 @@
 "use client";
 
 import { iCartTicket } from "@/interfaces/iCartTicket";
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from "react";
 
 type CartDrawerContextType = {
   isOpen: boolean;
@@ -17,7 +23,15 @@ const CartDrawerContext = createContext<CartDrawerContextType | undefined>(
 
 export function CartDrawerProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartTickets, setCartTickets] = useState<iCartTicket[]>([]);
+
+  const [cartTickets, setCartTickets] = useState<iCartTicket[]>(() => {
+    const storedCart = sessionStorage.getItem("cartTickets");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
+  useEffect(() => {
+    sessionStorage.setItem("cartTickets", JSON.stringify(cartTickets));
+  }, [cartTickets]);
 
   const toggleDrawer = () => setIsOpen((prev) => !prev);
   const closeDrawer = () => setIsOpen(false);
