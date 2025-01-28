@@ -4,8 +4,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useCartDrawer } from "@/context/Cart";
 
 const Header: React.FC = () => {
+  const { toggleDrawer } = useCartDrawer();
+
   const pathname = usePathname();
 
   const isActive = (path: string) =>
@@ -34,7 +37,10 @@ const Header: React.FC = () => {
                 eventos
               </Link>
             </li>
-            <li className={`${isActive("/carrinho")} cursor-pointer`}>
+            <li
+              onClick={toggleDrawer}
+              className={`${isActive("/carrinho")} cursor-pointer`}
+            >
               carrinho
             </li>
             <li>
