@@ -6,11 +6,23 @@ Este projeto foi criado para testar conhecimentos em Next.js, testes automatizad
 
 Primeiro, instale as dependências do projeto:
 
+Nota: Recomenda-se a versão 20 do Node.js.
+
 ```bash
 npm install
 ```
 
-Nota: Recomenda-se a versão 20 do Node.js.
+Depois, crie um arquivo na raiz do projeto com o seguinte nome:
+
+```bash
+.env.local
+```
+
+E dentro dele, cole a linha abaixo:
+
+```bash
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+```
 
 Em seguida, execute o servidor de desenvolvimento:
 
