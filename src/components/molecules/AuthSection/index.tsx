@@ -1,12 +1,18 @@
 "use client";
 
 import Input from "@/components/atoms/Input";
+import { register } from "@/services/auth/register";
 import React from "react";
 
 const AuthSection: React.FC = () => {
   const [isRegister, setIsRegiste] = React.useState(false);
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
+
+  const handleAuth = async () => {
+    await register({ email, password });
+    window.location.reload();
+  };
 
   return (
     <div className="">
@@ -30,7 +36,12 @@ const AuthSection: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button className="text-white font-semibold">CONTINUAR</button>
+          <button
+            onClick={() => handleAuth()}
+            className="text-white font-semibold"
+          >
+            CONTINUAR
+          </button>
         </div>
 
         <div className="flex flex-col items-center justify-center mt-6">
