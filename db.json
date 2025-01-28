@@ -12,8 +12,8 @@
         {
           "type": "VIP",
           "price": 250,
-          "available_quantity": 100,
-          "sold_quantity": 100
+          "available_quantity": 1,
+          "sold_quantity": 199
         },
         {
           "type": "PISTA",
