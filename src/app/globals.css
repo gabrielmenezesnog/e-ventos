@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #f7f7f7;
+  --background: #fff;
   --text: #111;
 }
 
@@ -13,17 +13,21 @@ html {
   --font-poppins: "Poppins";
   --font-roboto: "Roboto";
   --font-size: 1.25rem;
+  --radius: 0.25rem;
   --primary: #ff00ff;
   --black: #000;
   --white: #fff;
-  --gray-6: #9c9c9c,
-  --radius: 0.25rem;
+  --gray-11: #111;
+  --gray-6: #9c9c9c;
+  --gray-5: #b2b2b2;
+  --gray-1: #f7f7f7;
 }
 
 body {
   color: var(--text);
   background: var(--background);
   font-family: var(--font-poppins);
+  margin-top: 110px;
 }
 
 *,
@@ -42,7 +46,8 @@ button {
 
 h1,
 h2,
-h3 {
+h3,
+button {
   font-family: var(--font-poppins);
 }
 
@@ -121,7 +126,7 @@ textarea:focus {
 }
 
 button {
-  font-size: 1.125rem;
+  font-size: 1rem;
   display: block;
   cursor: pointer;
   border: none;
@@ -129,8 +134,9 @@ button {
   transition: 0.1s;
   background: var(--primary);
   color: var(--black);
-  padding: 0.6em 1.2em;
+  padding: 0.75rem 1.5rem;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 button:active {
@@ -140,6 +146,39 @@ button:active {
 button:disabled {
   opacity: 0.5;
   cursor: wait;
+}
+
+.icon_button {
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: 0.1s;
+  background: transparent;
+  padding: 0;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sub_button {
+  font-size: 1rem;
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  transition: 0.1s;
+  background: var(--black);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.sub_button:hover,
+.selected {
+  background: var(--white);
+  color: var(--black);
 }
 
 hr {
@@ -155,7 +194,6 @@ img {
 
 .flex {
   display: flex;
-  gap: 1rem;
 }
 
 .menu {
@@ -169,4 +207,14 @@ img {
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 180px;
+  }
+
+  .container {
+    padding: 1.25rem;
+  }
 }

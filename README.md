@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Projeto Next.js
 
-## Getting Started
+Este projeto foi criado para testar conhecimentos em Next.js, testes automatizados, Context API e DevOps (deploy).
 
-First, run the development server:
+## Rodando o projeto
+
+Primeiro, instale as dependências do projeto:
+
+```bash
+npm install
+```
+
+Nota: Recomenda-se a versão 20 do Node.js.
+
+Em seguida, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Este comando iniciará o front-end na porta http://localhost:3000 e o back-end mockado (json-server) na porta http://localhost:5000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Regras de Negócio
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Na página inicial, na seção "mais procurados" estão listados os eventos com mais ingressos vendidos;
 
-## Learn More
+2. Ao clicar em comprar em qualquer card de evento, o usuário será direcionado para a página de compra;
 
-To learn more about Next.js, take a look at the following resources:
+3. Na listagem dos eventos na página "eventos", existem filtros que montam ma consulta por queryParam;
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. É possível filtrar ao clicar no botão "filtrar" ou também limpar os filtros, clicando no botão "limpar filtros";
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. Para adicionar um item ao carrinho, deve-se primeiro escolher o tipo do ingresso (VIP, Pista ou Meia) e a quantidade. Então clique em "selecionar" e depois "adicionar ao carrinho";
 
-## Deploy on Vercel
+6. É possível adicionar até 3 tipos de ingresso com diferentes quantidades (máximo de 5) para o mesmo evento no mesmo carrinho;
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+7. É possível adicionar e remover itens do carrinho, bem como acessar o carrinho de qualquer lugar do E-Ventos;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+8. Só é possível finalizar uma compra se o usuário estiver autenticado. Caso não autenticado, é mostrada uma mensagem no carrinho e o usuário pode ir para a página de autenticação;
+
+9. Na página de autenticação, é possível logar ou se registrar, e uma vez logado, tem acesso a finalizar uma compra;
+
+10. O carrinho e a autenticação são contextos e acessáveis de qualquer lugar do E-Ventos. O cache de ambos fica armazenado no sessionStorage.
+
+## O que pode melhorar
+
+1. Na página "eventos", o get que traz os eventos pode ser paginado ou implementado um lazy load;
+
+2. Pode ser adicionado um botão "carrinho" diretamente no card do evento, sem necessidade de entrar na página de compra;
