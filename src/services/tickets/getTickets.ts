@@ -8,8 +8,15 @@ interface TicketsResponse {
   isLoading: boolean;
 }
 
-export const getTickets = async (): Promise<TicketsResponse> => {
-  const url = `${baseURL}/tickets`;
+export const getTickets = async (
+  filters?: Record<string, string>
+): Promise<TicketsResponse> => {
+  let url = `${baseURL}/tickets`;
+
+  if (filters) {
+    const queryParams = new URLSearchParams(filters).toString();
+    url += `?${queryParams}`;
+  }
 
   const initialState: TicketsResponse = {
     error: false,

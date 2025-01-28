@@ -1,8 +1,9 @@
 "use client";
 
+import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import { iTickets } from "@/interfaces/iTickets";
-import { useState, useEffect, SetStateAction } from "react";
+import { useState } from "react";
 
 interface EventsFilterProps {
   tickets: iTickets[];
@@ -16,108 +17,113 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
   const [minPrice, setMinPrice] = useState<string>("");
   const [maxPrice, setMaxPrice] = useState<string>("");
 
-  const uniqueLocations = Array.from(
+  const locationOptions = Array.from(
     new Set(tickets.map((ticket) => ticket.local))
   );
 
-  const maxTicketPrice = tickets.reduce(
-    (max, ticket) => Math.max(max, ticket.price),
-    0
-  );
-
-  useEffect(() => {
-    let filteredTickets = tickets;
+  const filterTickets = () => {
+    let filtered = tickets;
 
     if (startDate) {
-      filteredTickets = filteredTickets.filter(
-        (ticket) =>
-          new Date(ticket.date).toISOString().split("T")[0] >= startDate
+      filtered = filtered.filter(
+        (ticket) => new Date(ticket.date) >= new Date(startDate)
       );
     }
-
     if (endDate) {
-      filteredTickets = filteredTickets.filter(
-        (ticket) => new Date(ticket.date).toISOString().split("T")[0] <= endDate
+      filtered = filtered.filter(
+        (ticket) => new Date(ticket.date) <= new Date(endDate)
       );
     }
-
     if (location) {
-      filteredTickets = filteredTickets.filter(
-        (ticket) => ticket.local === location
+      filtered = filtered.filter((ticket) =>
+        ticket.local.toLowerCase().includes(location.toLowerCase())
       );
     }
-
     if (minPrice) {
-      filteredTickets = filteredTickets.filter(
+      filtered = filtered.filter(
         (ticket) => ticket.price >= parseFloat(minPrice)
       );
     }
-
     if (maxPrice) {
-      filteredTickets = filteredTickets.filter(
+      filtered = filtered.filter(
         (ticket) => ticket.price <= parseFloat(maxPrice)
       );
-    } else if (maxPrice !== "") {
-      setMaxPrice(maxTicketPrice.toString());
     }
 
-    onFilter(filteredTickets);
-  }, [startDate, endDate, location, minPrice, maxPrice, tickets]);
+    onFilter(filtered);
+  };
+
+  const resetFilters = () => {
+    setStartDate("");
+    setEndDate("");
+    setLocation("");
+    setMinPrice("");
+    setMaxPrice("");
+    onFilter(tickets);
+  };
 
   return (
     <div className="flex flex-col gap-4 mb-8">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <Input
-          id="startDate"
-          label="Data Inicial"
-          type="date"
-          value={startDate}
-          onChange={(e: { target: { value: SetStateAction<string> } }) =>
-            setStartDate(e.target.value)
-          }
-        />
+      <div className="flex flex-wrap gap-4">
+        <div className="w-full sm:w-auto">
+          <Input
+            id="startDate"
+            label="Data Inicial"
+            type="date"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+          />
+        </div>
 
-        <Input
-          id="endDate"
-          label="Data Final"
-          type="date"
-          value={endDate}
-          onChange={(e: { target: { value: SetStateAction<string> } }) =>
-            setEndDate(e.target.value)
-          }
-        />
+        <div className="w-full sm:w-auto">
+          <Input
+            id="endDate"
+            label="Data Final"
+            type="date"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+          />
+        </div>
 
-        <Input
-          id="location"
-          label="Local"
-          type="select"
-          value={location}
-          onChange={(e: { target: { value: SetStateAction<string> } }) =>
-            setLocation(e.target.value)
-          }
-          options={uniqueLocations}
-        />
-      </div>
-      <div className="flex flex-row items-center gap-5">
-        <Input
-          id="minPrice"
-          label="Preço Mínimo"
-          type="number"
-          value={minPrice}
-          onChange={(e: { target: { value: SetStateAction<string> } }) =>
-            setMinPrice(e.target.value)
-          }
-        />
+        <div className="w-full sm:w-auto">
+          <Input
+            id="location"
+            label="Local"
+            type="select"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            options={locationOptions}
+          />
+        </div>
 
-        <Input
-          id="maxPrice"
-          label="Preço Máximo"
-          type="number"
-          value={maxPrice}
-          onChange={(e: { target: { value: SetStateAction<string> } }) =>
-            setMaxPrice(e.target.value)
-          }
-        />
+        <div className="w-full sm:w-auto">
+          <Input
+            id="minPrice"
+            label="Preço Mínimo"
+            type="number"
+            value={minPrice}
+            onChange={(e) => setMinPrice(e.target.value)}
+          />
+        </div>
+
+        <div className="w-full sm:w-auto">
+          <Input
+            id="maxPrice"
+            label="Preço Máximo"
+            type="number"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+          />
+        </div>
+
+        <div className="flex flex-row items-center gap-4">
+          <Button type="default" label="Filtrar" onClick={filterTickets} />
+          <Button
+            type="secondary"
+            label="Limpar Filtros"
+            onClick={resetFilters}
+          />
+        </div>
       </div>
     </div>
   );
