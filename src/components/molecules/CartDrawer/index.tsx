@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/atoms/Button";
 import TicketTypeList from "@/components/atoms/TicketTypeList";
 import { useAuth } from "@/context/Auth";
 import { useCartDrawer } from "@/context/Cart";
@@ -36,12 +37,13 @@ export default function CartDrawer() {
       } h-full bg-white transition-right duration-300 ease-in-out shadow-lg z-50 
         w-full sm:w-96`}
     >
-      <button
+      <Button
+        type="default"
         onClick={closeDrawer}
         className="p-2 bg-gray-200 rounded m-4 text-sm"
       >
         <Image src="/images/close.svg" alt="fechar" width={20} height={20} />
-      </button>
+      </Button>
 
       <h2 className="text-xl font-bold p-4 border-b">Carrinho</h2>
 
@@ -72,7 +74,8 @@ export default function CartDrawer() {
                     onChangeType={() => {}}
                   />
 
-                  <button
+                  <Button
+                    type="default"
                     onClick={() => handleRemoveItem(index)}
                     className="p-2 bg-gray-400 rounded m-4 text-sm absolute top-0 right-0"
                   >
@@ -82,7 +85,7 @@ export default function CartDrawer() {
                       width={20}
                       height={20}
                     />
-                  </button>
+                  </Button>
                 </li>
               );
             })}
@@ -112,13 +115,13 @@ export default function CartDrawer() {
             </p>
           )}
 
-          <button
+          <Button
+            type="default"
             onClick={() => handleFinishShopping()}
             className="text-white font-semibold w-full"
             disabled={!isLoggedIn}
-          >
-            FINALIZAR COMPRA
-          </button>
+            label="FINALIZAR COMPRA"
+          />
         </div>
       )}
     </div>

@@ -4,6 +4,7 @@ import React from "react";
 import { iTickets } from "@/interfaces/iTickets";
 import Link from "next/link";
 import Loading from "../Loading";
+import Button from "../Button";
 
 interface iProps {
   tickets: iTickets[];
@@ -60,9 +61,9 @@ const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
             </p>
 
             <div className="flex flex-row items-center gap-2 mt-6">
-              <button className="bg-primary text-white font-semibold">
+              <Button type="default">
                 <Link href={`/event/${ticket.id}`}>Comprar</Link>
-              </button>
+              </Button>
             </div>
           </div>
         </li>

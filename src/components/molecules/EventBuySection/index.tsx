@@ -9,6 +9,7 @@ import Input from "@/components/atoms/Input";
 import { useCartDrawer } from "@/context/Cart";
 import { iCartTicket } from "@/interfaces/iCartTicket";
 import TicketTypeList from "@/components/atoms/TicketTypeList";
+import Button from "@/components/atoms/Button";
 
 interface iProps {
   ticket: iTickets;
@@ -53,7 +54,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
       cartTickets.length > 0 ? cartTickets.length : selectedTickets.length;
 
     const newTicket: iCartTicket = {
-      id: ticket.id,
+      id: ticket.id.toString(),
       index,
       name: ticket.name,
       price: selectedTicketType.price,
@@ -190,12 +191,13 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                     />
                   </div>
 
-                  <button
-                    className="font-medium bg-gray_6 text-gray_11"
-                    onClick={handleAddToCart}
-                  >
-                    {selectedTickets.length > 0 ? "ATUALIZAR" : "SELECIONAR"}
-                  </button>
+                  <Button
+                    type="secondary"
+                    onClick={() => handleAddToCart()}
+                    label={
+                      selectedTickets.length > 0 ? "ATUALIZAR" : "SELECIONAR"
+                    }
+                  />
                 </div>
 
                 {selectedTicket?.available_quantity < (ticketQuantity || 1) && (

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Button from "../Button";
 
 const HeroSection: React.FC = () => {
   return (
@@ -19,11 +20,13 @@ const HeroSection: React.FC = () => {
               ideal para viver experiências inesquecíveis.
             </p>
 
-            <button className="mb-10 md:mb-0">
-              <Link href="/events" className="font-medium">
-                ver eventos
-              </Link>
-            </button>
+            <div className="mb-10 md:mb-0">
+              <Button type="default">
+                <Link href="/events" className="font-medium">
+                  ver eventos
+                </Link>
+              </Button>
+            </div>
           </div>
 
           <div className="hidden md:block">

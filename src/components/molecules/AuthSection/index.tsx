@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import { useAuth } from "@/context/Auth";
 import React, { useState } from "react";
@@ -41,24 +42,24 @@ const AuthSection: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button
+          <Button
+            type="default"
+            label="CONTINUAR"
             onClick={() => handleAuth()}
-            className="text-white font-semibold"
-          >
-            CONTINUAR
-          </button>
+          />
         </div>
 
         <div className="flex flex-col items-center justify-center mt-6">
           <p className="text-center mt-2">
             {isRegister ? "Já possui uma conta?" : "Não possui uma conta?"}
           </p>
-          <button
-            onClick={() => setIsRegister(!isRegister)}
+
+          <Button
+            type="default"
             className="text-primary icon_button font-semibold"
-          >
-            {isRegister ? "Entrar" : "Cadastre-se"}
-          </button>
+            label={isRegister ? "Entrar" : "Cadastre-se"}
+            onClick={() => setIsRegister(!isRegister)}
+          />
         </div>
       </div>
     </div>
