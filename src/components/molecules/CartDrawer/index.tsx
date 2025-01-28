@@ -2,6 +2,7 @@
 
 import TicketTypeList from "@/components/atoms/TicketTypeList";
 import { useCartDrawer } from "@/context/Cart";
+import { finishShopping } from "@/services/cart/finishShopping";
 import Image from "next/image";
 import React from "react";
 
@@ -18,6 +19,12 @@ export default function CartDrawer() {
 
   const convenienceFee = total * 0.05;
   const totalWithFee = total + convenienceFee;
+
+  const handleFinishShopping = async () => {
+    await finishShopping(cartTickets);
+
+    window.location.reload();
+  };
 
   return (
     <div
@@ -92,7 +99,10 @@ export default function CartDrawer() {
             2
           )}`}</h1>
 
-          <button className="text-white font-semibold w-full">
+          <button
+            onClick={() => handleFinishShopping()}
+            className="text-white font-semibold w-full"
+          >
             FINALIZAR COMPRA
           </button>
         </div>

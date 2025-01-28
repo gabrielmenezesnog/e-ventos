@@ -2,7 +2,7 @@
   "user": {},
   "tickets": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Pearl Jam",
       "description": "Uma apresentação épica da lendária banda de rock Pearl Jam, trazendo seus maiores sucessos em uma noite inesquecível.",
       "date": "2025-03-15T20:00:00",
@@ -29,12 +29,12 @@
         }
       ],
       "total_tickets": 1000,
-      "sold_quantity": 600,
-      "available_quantity": 400,
+      "sold_quantity": 603,
+      "available_quantity": 397,
       "image_url": "https://cdn-images.dzcdn.net/images/artist/3e279f4e0269fdb2733474ddfa074a91/500x500.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Foo Fighters",
       "description": "Show eletrizante do Foo Fighters, repleto de energia e clássicos do rock.",
       "date": "2025-04-20T21:00:00",
@@ -66,7 +66,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/bb24a51b384a15b1b9e8f9617793e458/500x500.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Red Hot Chili Peppers",
       "description": "A lendária banda californiana traz sua mistura única de rock e funk para um show inesquecível.",
       "date": "2025-05-10T19:30:00",
@@ -98,7 +98,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/1f807c8a8a9c4f98eebd38a3f6431d34/500x500.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Metallica",
       "description": "O peso do heavy metal com a potência do Metallica, em um show histórico.",
       "date": "2025-06-18T20:30:00",
@@ -130,7 +130,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/7bdbc52f9c1e80751c91e2f40e0d3a3f/500x500.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Coldplay",
       "description": "A banda britânica Coldplay traz sua turnê mundial para um show emocionante e cheio de efeitos visuais.",
       "date": "2025-07-25T20:00:00",
@@ -162,7 +162,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/2d5dce366c824705bc216f0a3b68cd13/500x500.jpg"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "The Weeknd",
       "description": "Uma noite inesquecível com The Weeknd, repleta de hits e performances envolventes.",
       "date": "2025-08-15T21:00:00",
@@ -194,7 +194,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/b4c0080a223e4d6784b36c4a1a3e058b/500x500.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Ed Sheeran",
       "description": "O cantor e compositor britânico traz seus sucessos românticos para uma noite memorável.",
       "date": "2025-09-10T20:30:00",
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Adele",
       "description": "A poderosa voz de Adele em uma apresentação intimista e emocionante.",
       "date": "2025-10-05T19:00:00",
@@ -254,7 +254,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/b6c7bb10dfac4e1e926e1a3493c0a1ef/500x500.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Bruno Mars",
       "description": "Um show cheio de energia e carisma com os maiores sucessos de Bruno Mars.",
       "date": "2025-11-20T21:00:00",
@@ -286,7 +286,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/4c6ff6fb13e84c939ba7dc945b8d63b2/500x500.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Taylor Swift",
       "description": "Uma experiência única com Taylor Swift, repleta de hits e performances icônicas.",
       "date": "2025-12-15T20:00:00",
@@ -320,7 +320,7 @@
   ],
   "best_sellers": [
     {
-      "id": 3,
+      "id": "3",
       "name": "Red Hot Chili Peppers",
       "description": "A lendária banda californiana traz sua mistura única de rock e funk para um show inesquecível.",
       "date": "2025-05-10T19:30:00",
@@ -352,7 +352,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/1f807c8a8a9c4f98eebd38a3f6431d34/500x500.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Coldplay",
       "description": "A banda britânica Coldplay traz sua turnê mundial para um show emocionante e cheio de efeitos visuais.",
       "date": "2025-07-25T20:00:00",
@@ -384,7 +384,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/2d5dce366c824705bc216f0a3b68cd13/500x500.jpg"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Ed Sheeran",
       "description": "O cantor e compositor britânico traz seus sucessos românticos para uma noite memorável.",
       "date": "2025-09-10T20:30:00",
@@ -416,7 +416,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/7a7f3e2e74c648429bcc2dff7c3ffadf/500x500.jpg"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Bruno Mars",
       "description": "Um show cheio de energia e carisma com os maiores sucessos de Bruno Mars.",
       "date": "2025-11-20T21:00:00",
@@ -448,7 +448,7 @@
       "image_url": "https://cdn-images.dzcdn.net/images/artist/4c6ff6fb13e84c939ba7dc945b8d63b2/500x500.jpg"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Taylor Swift",
       "description": "Uma experiência única com Taylor Swift, repleta de hits e performances icônicas.",
       "date": "2025-12-15T20:00:00",
