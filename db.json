@@ -223,7 +223,11 @@
           "available_quantity": 200,
           "sold_quantity": 250
         }
-      ]
+      ],
+      "total_tickets": 1630,
+      "sold_quantity": 900,
+      "available_quantity": 730,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/b4c0080a223e4d6784b36c4a1a3e058b/500x500.jpg"
     },
     {
       "id": "8",

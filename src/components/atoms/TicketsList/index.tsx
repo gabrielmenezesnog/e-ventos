@@ -2,9 +2,8 @@
 
 import React from "react";
 import { iTickets } from "@/interfaces/iTickets";
-import Link from "next/link";
 import Loading from "../Loading";
-import Button from "../Button";
+import EventCard from "../EventCard";
 
 interface iProps {
   tickets: iTickets[];
@@ -30,39 +29,7 @@ const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
       } ml-5`}
     >
       {tickets.map((ticket) => (
-        <li
-          key={ticket.id}
-          className={`flex-shrink-0 w-full p-4 bg-gray_1 shadow-md rounded-lg ${
-            vertical ? "" : "max-w-[400px]"
-          }`}
-        >
-          <div className="p-4">
-            <div className="flex flex-row items-center gap-2 mb-2">
-              <div className="h-2 w-3 bg-primary" />
-              <h3 className="text-lg font-bold">{ticket.name}</h3>
-            </div>
-
-            <p className="text-sm text-gray-600 font-medium mb-5">
-              R$ {ticket.price.toFixed(2)}
-            </p>
-
-            <p className="text-sm text-gray-600 mb-2">{ticket.local}</p>
-
-            <p className="text-sm text-gray-600 mb-5">
-              {new Date(ticket.date).toLocaleDateString("pt-BR")}
-            </p>
-
-            <p className="text-sm text-gray-600">
-              {`${ticket.sold_quantity} ingressos vendidos 🔥`}
-            </p>
-
-            <div className="flex flex-row items-center gap-2 mt-6">
-              <Button type="default">
-                <Link href={`/event/${ticket.id}`}>Comprar</Link>
-              </Button>
-            </div>
-          </div>
-        </li>
+        <EventCard key={ticket.id} ticket={ticket} vertical={vertical} />
       ))}
     </ul>
   );
