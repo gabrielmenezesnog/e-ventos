@@ -23,14 +23,14 @@ const CartDrawerContext = createContext<CartDrawerContextType | undefined>(
 
 export function CartDrawerProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [cartTickets, setCartTickets] = useState<iCartTicket[]>([]);
 
-  const [cartTickets, setCartTickets] = useState<iCartTicket[]>(() => {
-    if (typeof window !== "undefined") {
-      const storedCart = sessionStorage.getItem("cartTickets");
-      return storedCart ? JSON.parse(storedCart) : [];
+  useEffect(() => {
+    const storedCart = sessionStorage.getItem("cartTickets");
+    if (storedCart) {
+      setCartTickets(JSON.parse(storedCart));
     }
-    return [];
-  });
+  }, []);
 
   useEffect(() => {
     sessionStorage.setItem("cartTickets", JSON.stringify(cartTickets));
