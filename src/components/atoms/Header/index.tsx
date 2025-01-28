@@ -5,9 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCartDrawer } from "@/context/Cart";
+import { useAuth } from "@/context/Auth";
 
 const Header: React.FC = () => {
   const { toggleDrawer } = useCartDrawer();
+  const { isLoggedIn, logout } = useAuth();
 
   const pathname = usePathname();
 
@@ -16,6 +18,16 @@ const Header: React.FC = () => {
 
   const handleLogoClick = () => {
     window.location.href = "/";
+  };
+
+  const handleLogout = () => {
+    logout();
+
+    const isOnAuthPage = pathname === "/auth";
+
+    if (!isOnAuthPage) {
+      window.location.href = "/auth";
+    }
   };
 
   return (
@@ -43,11 +55,21 @@ const Header: React.FC = () => {
             >
               carrinho
             </li>
-            <li>
-              <Link href="/auth" className={isActive("/auth")}>
-                entrar
-              </Link>
-            </li>
+
+            {isLoggedIn ? (
+              <li
+                onClick={() => handleLogout()}
+                className={`${isActive("/carrinho")} cursor-pointer`}
+              >
+                sair
+              </li>
+            ) : (
+              <li>
+                <Link href="/auth" className={isActive("/auth")}>
+                  entrar
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
       </div>

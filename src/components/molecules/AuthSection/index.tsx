@@ -1,17 +1,22 @@
 "use client";
 
 import Input from "@/components/atoms/Input";
-import { register } from "@/services/auth/register";
-import React from "react";
+import { useAuth } from "@/context/Auth";
+import React, { useState } from "react";
 
 const AuthSection: React.FC = () => {
-  const [isRegister, setIsRegiste] = React.useState(false);
-  const [email, setEmail] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const { isLoggedIn, login, signUp } = useAuth();
+  const [isRegister, setIsRegister] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleAuth = async () => {
-    await register({ email, password });
-    window.location.reload();
+    if (isLoggedIn || isRegister) {
+      signUp(email, password);
+      return;
+    }
+
+    login(email, password);
   };
 
   return (
@@ -49,14 +54,13 @@ const AuthSection: React.FC = () => {
             {isRegister ? "Já possui uma conta?" : "Não possui uma conta?"}
           </p>
           <button
-            onClick={() => setIsRegiste(!isRegister)}
+            onClick={() => setIsRegister(!isRegister)}
             className="text-primary icon_button font-semibold"
           >
             {isRegister ? "Entrar" : "Cadastre-se"}
           </button>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center mt-6"></div>
     </div>
   );
 };

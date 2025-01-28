@@ -1,13 +1,16 @@
 "use client";
 
 import TicketTypeList from "@/components/atoms/TicketTypeList";
+import { useAuth } from "@/context/Auth";
 import { useCartDrawer } from "@/context/Cart";
 import { finishShopping } from "@/services/cart/finishShopping";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function CartDrawer() {
   const { isOpen, closeDrawer, cartTickets, setCartTickets } = useCartDrawer();
+  const { isLoggedIn } = useAuth();
 
   const handleRemoveItem = (index: number) => {
     setCartTickets((prevTickets) => prevTickets.filter((_, i) => i !== index));
@@ -42,7 +45,7 @@ export default function CartDrawer() {
 
       <h2 className="text-xl font-bold p-4 border-b">Carrinho</h2>
 
-      <div className="p-5 overflow-y-auto h-[calc(70%-80px)]">
+      <div className="p-5 overflow-y-auto h-[calc(65%-80px)]">
         {cartTickets.length === 0 ? (
           <p className="text-gray-500 text-center">Seu carrinho está vazio.</p>
         ) : (
@@ -99,9 +102,20 @@ export default function CartDrawer() {
             2
           )}`}</h1>
 
+          {!isLoggedIn && (
+            <p className="text-gray-500 text-center text-sm mb-3">
+              Faça
+              <span className="text-primary mx-1">
+                <Link href="/auth">login</Link>
+              </span>
+              para finalizar a compra.
+            </p>
+          )}
+
           <button
             onClick={() => handleFinishShopping()}
             className="text-white font-semibold w-full"
+            disabled={!isLoggedIn}
           >
             FINALIZAR COMPRA
           </button>
