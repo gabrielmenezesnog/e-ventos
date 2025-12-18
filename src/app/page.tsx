@@ -10,8 +10,6 @@ export default async function Home() {
   try {
     tickets = await getBestSellers();
   } catch {
-    console.log("json-server not available, using empty data");
-    // Quando o json-server não estiver disponível, usar dados vazios
     tickets = [];
   }
 

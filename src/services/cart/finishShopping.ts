@@ -54,7 +54,6 @@ export const finishShopping = async (cartTickets: iCartTicket[]) => {
       }
     }
   } catch (error) {
-    console.error("Erro ao finalizar a compra:", error);
     throw error;
   }
 };
