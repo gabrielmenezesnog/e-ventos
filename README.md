@@ -21,7 +21,7 @@ Then, create a file at the root of the project with the following name:
 Inside it, add the line below:
 
 ```bash
-NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5002
 ```
 
 Next, start the development server:
@@ -30,7 +30,7 @@ Next, start the development server:
 npm run dev
 ```
 
-This command will start the front-end on http://localhost:3000 and the mocked back-end (json-server) on http://localhost:5000
+This command will start the front-end on http://localhost:3000 and the mocked back-end (json-server) on http://localhost:5002
 
 ## Business Rules
 
