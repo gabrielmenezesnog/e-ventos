@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { translations, TranslationKey } from '@/utils/translations';
+import { translations, TranslationKey } from '@/translations';
 
 export const useTranslation = () => {
   const [language, setLanguage] = useState<TranslationKey>('en');
