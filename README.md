@@ -2,6 +2,11 @@
 
 This project was created to test knowledge in Next.js, automated testing, Context API, and DevOps (deployment).
 
+## Preview
+
+Here you can see a preview of the project, it's a short video:
+[Watch the preview video](https://jam.dev/c/5e90b263-3ac4-44e5-a149-d97620315973)
+
 ## Running the project
 
 First, install the project dependencies:
