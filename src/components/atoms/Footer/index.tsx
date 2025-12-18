@@ -2,8 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslation } from "@/hooks/useTranslation";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
@@ -19,7 +22,7 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="w-fit text-center sm:text-left">
-            <h2 className="text-2xl font-bold mb-3">Contato</h2>
+            <h2 className="text-2xl font-bold mb-3">{t('footer.contact')}</h2>
             <ul className="flex flex-col gap-1 text-base">
               <li>+55 41 99992-3767</li>
               <li>gabriel.gmnogueira@gmail.com</li>
@@ -30,7 +33,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-8 text-sm text-center text-gray_6 sm:mt-16 sm:text-left">
-          E-Ventos © Alguns direitos reservados.
+          {t('footer.rights')}
         </div>
       </div>
     </footer>

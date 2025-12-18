@@ -5,11 +5,13 @@ import TicketTypeList from "@/components/atoms/TicketTypeList";
 import { useAuth } from "@/context/Auth";
 import { useCartDrawer } from "@/context/Cart";
 import { finishShopping } from "@/services/cart/finishShopping";
+import { useTranslation } from "@/hooks/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function CartDrawer() {
+  const { t } = useTranslation();
   const { isOpen, closeDrawer, cartTickets, setCartTickets } = useCartDrawer();
   const { isLoggedIn } = useAuth();
 
@@ -42,14 +44,14 @@ export default function CartDrawer() {
         onClick={closeDrawer}
         className="p-2 bg-gray-200 rounded m-4 text-sm"
       >
-        <Image src="/images/close.svg" alt="fechar" width={20} height={20} />
+        <Image src="/images/close.svg" alt={t('cart.close')} width={20} height={20} />
       </Button>
 
-      <h2 className="text-xl font-bold p-4 border-b">Carrinho</h2>
+      <h2 className="text-xl font-bold p-4 border-b">{t('cart.title')}</h2>
 
       <div className="p-5 overflow-y-auto h-[calc(65%-80px)]">
         {cartTickets.length === 0 ? (
-          <p className="text-gray-500 text-center">Seu carrinho está vazio.</p>
+          <p className="text-gray-500 text-center">{t('cart.empty')}</p>
         ) : (
           <ul>
             {cartTickets.map((ticket, index) => {
@@ -64,7 +66,7 @@ export default function CartDrawer() {
                   </div>
 
                   <ul className="text-gray_5 text-base mb-5">
-                    <li>Quantidade: {ticket.quantity}</li>
+                    <li>{t('cart.quantity')} {ticket.quantity}</li>
                     <li>{`R$ ${ticket.total_value?.toFixed(2)}`}</li>
                   </ul>
 
@@ -81,7 +83,7 @@ export default function CartDrawer() {
                   >
                     <Image
                       src="/images/close.svg"
-                      alt="fechar"
+                      alt={t('cart.close')}
                       width={20}
                       height={20}
                     />
@@ -95,23 +97,23 @@ export default function CartDrawer() {
 
       {cartTickets.length > 0 && (
         <div className="p-5">
-          <p className="text-base">{`Valor dos itens: R$ ${total.toFixed(
+          <p className="text-base">{`${t('cart.itemsValue')} R$ ${total.toFixed(
             2
           )}`}</p>
-          <p className="text-base mb-3">{`Taxa de conveniência: R$ ${convenienceFee.toFixed(
+          <p className="text-base mb-3">{`${t('cart.convenienceFee')} R$ ${convenienceFee.toFixed(
             2
           )}`}</p>
-          <h1 className="font-semibold mb-5">{`TOTAL: R$ ${totalWithFee.toFixed(
+          <h1 className="font-semibold mb-5">{`${t('cart.total')} R$ ${totalWithFee.toFixed(
             2
           )}`}</h1>
 
           {!isLoggedIn && (
             <p className="text-gray-500 text-center text-sm mb-3">
-              Faça
+              {t('cart.loginMessage')}
               <span className="text-primary mx-1">
-                <Link href="/auth">login</Link>
+                <Link href="/auth">{t('cart.login')}</Link>
               </span>
-              para finalizar a compra.
+              {t('cart.loginSuffix')}
             </p>
           )}
 
@@ -120,7 +122,7 @@ export default function CartDrawer() {
             onClick={() => handleFinishShopping()}
             className="text-white font-semibold w-full"
             disabled={!isLoggedIn}
-            label="FINALIZAR COMPRA"
+            label={t('cart.finishPurchase')}
           />
         </div>
       )}

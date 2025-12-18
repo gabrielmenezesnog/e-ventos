@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "concurrently \"npm run json-server\" \"next dev\"",
-    "json-server": "json-server --watch db.json --port 5000",
+    "json-server": "json-server --watch db.json --port 5002 --host 0.0.0.0",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

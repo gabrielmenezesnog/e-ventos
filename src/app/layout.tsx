@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className={`${poppins.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${poppins.variable} ${roboto.variable}`}>
       <body>
         <AuthProvider>
           <CartDrawerProvider>

@@ -1,3 +1,5 @@
+import { iTicketType } from "./iTicketType";
+
 export interface iCartTicket {
   id?: string;
   index: number;
@@ -6,10 +8,5 @@ export interface iCartTicket {
   type: string;
   quantity: number;
   total_value?: number;
-  ticket_types?: {
-    type: string;
-    price: number;
-    available_quantity: number;
-    sold_quantity: number;
-  }[];
+  ticket_types?: iTicketType[];
 }

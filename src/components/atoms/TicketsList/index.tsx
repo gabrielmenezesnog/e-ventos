@@ -17,7 +17,7 @@ const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
   }
 
   if (tickets.length === 0) {
-    return <p className="mt-5 text-gray_6">Não há ingressos disponíveis.</p>;
+    return null;
   }
 
   return (

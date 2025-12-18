@@ -2,7 +2,8 @@
 
 import { getUser } from "@/services/auth/getUser";
 import { register } from "@/services/auth/register";
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState } from "react";
+import { iComponentWithChildren } from "@/interfaces/iComponent";
 
 interface AuthContextType {
   isLoggedIn: boolean;
@@ -13,7 +14,7 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-export const AuthProvider = ({ children }: { children: ReactNode }) => {
+export const AuthProvider = ({ children }: iComponentWithChildren) => {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
 
   const login = async (email: string, password: string) => {

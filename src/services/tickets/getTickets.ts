@@ -1,6 +1,7 @@
 import { api } from "../api";
 import { baseURL } from "../api/config";
 import { iTickets } from "@/interfaces/iTickets";
+import { iQueryFilters } from "@/interfaces/iFilters";
 
 interface TicketsResponse {
   error: boolean;
@@ -9,7 +10,7 @@ interface TicketsResponse {
 }
 
 export const getTickets = async (
-  filters?: Record<string, string>
+  filters?: iQueryFilters
 ): Promise<TicketsResponse> => {
   let url = `${baseURL}/tickets`;
 

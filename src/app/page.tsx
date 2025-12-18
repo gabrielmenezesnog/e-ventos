@@ -9,14 +9,18 @@ export default async function Home() {
 
   try {
     tickets = await getBestSellers();
-  } catch (error) {
-    console.error("Failed to fetch best sellers", error);
+  } catch {
+    console.log("json-server not available, using empty data");
+    // Quando o json-server não estiver disponível, usar dados vazios
+    tickets = [];
   }
 
   return (
     <main>
       <HeroSection />
-      <BestSellersSection tickets={tickets} isLoading={false} />
+      {tickets.length > 0 && (
+        <BestSellersSection tickets={tickets} isLoading={false} />
+      )}
     </main>
   );
 }
