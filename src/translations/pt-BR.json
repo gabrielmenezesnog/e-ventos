@@ -25,7 +25,9 @@
     "minPrice": "Preço Mínimo",
     "maxPrice": "Preço Máximo",
     "filterButton": "Filtrar",
-    "clearFilters": "Limpar Filtros"
+    "clearFilters": "Limpar Filtros",
+    "advancedFilters": "Filtros Avançados",
+    "resultsCount": "Resultados encontrados"
   },
   "eventBuy": {
     "ticketType": "TIPO DO INGRESSO",
@@ -36,7 +38,23 @@
     "selectedTickets": "INGRESSOS SELECIONADOS",
     "totalValue": "VALOR TOTAL",
     "addToCart": "ADICIONAR AO CARRINHO",
-    "information": "INFORMAÇÕES"
+    "information": "INFORMAÇÕES",
+    "quantityUnavailable": "Quantidade indisponível",
+    "date": "Data",
+    "location": "Local",
+    "sold": "Vendidos",
+    "remaining": "Restantes"
+  },
+  "eventCard": {
+    "buy": "Comprar",
+    "ticketsSold": "ingressos vendidos"
+  },
+  "eventPage": {
+    "ticketNotFound": "Erro: Ticket não encontrado",
+    "track": "PISTA"
+  },
+  "pageHeader": {
+    "pageTitle": "Título da Página"
   },
   "cart": {
     "title": "Carrinho",
@@ -71,5 +89,47 @@
     "loading": "Carregando...",
     "error": "Erro",
     "success": "Sucesso"
+  },
+  "ticketTypes": {
+    "VIP": "VIP",
+    "FLOOR": "Pista",
+    "HALF_PRICE": "Meia Entrada",
+    "FULL_PASS": "Passe Completo",
+    "DAILY_PASS": "Passe Diário",
+    "DAY_PASS": "Passe do Dia",
+    "GENERAL": "Geral",
+    "PREMIUM": "Premium",
+    "STANDARD": "Padrão",
+    "FRONT_ROW": "Frente",
+    "FULL_ACCESS": "Acesso Completo",
+    "GENERAL_ACCESS": "Acesso Geral",
+    "GENERAL_ADMISSION": "Admissão Geral",
+    "GRANDSTAND": "Arquibancada",
+    "PREMIUM_SEAT": "Assento Premium",
+    "BOX_SEAT": "Camarote",
+    "STANDS": "Arquibancadas",
+    "VIP_AREA": "Área VIP",
+    "VIP_DINING": "Jantar VIP",
+    "VIP_INVESTOR": "Investidor VIP",
+    "VIP_TASTING": "Degustação VIP",
+    "FULL_CONFERENCE": "Conferência Completa",
+    "FULL_DAY": "Dia Completo",
+    "FULL_EVENT": "Evento Completo",
+    "SINGLE_DAY": "Dia Único",
+    "STUDENT": "Estudante"
+  },
+  "insights": {
+    "title": "Descubra as",
+    "titleHighlight": "Tendências",
+    "categoryDistribution": "Distribuição por Categoria",
+    "topGenres": "Gêneros Mais Populares",
+    "filterAll": "Todos",
+    "filterTop5": "Top 5",
+    "filterTop10": "Top 10",
+    "filterDetails": "Ver Detalhes",
+    "totalEvents": "Total de Eventos",
+    "totalSales": "Total de Vendas",
+    "categoryBreakdown": "Detalhamento por Categoria",
+    "genreBreakdown": "Detalhamento por Gênero"
   }
 }

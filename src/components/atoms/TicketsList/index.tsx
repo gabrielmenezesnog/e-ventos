@@ -9,9 +9,17 @@ interface iProps {
   tickets: iTickets[];
   isLoading?: boolean;
   vertical?: boolean;
+  unlimitedWidth?: boolean;
+  grid?: boolean;
 }
 
-const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
+const TicketsList: React.FC<iProps> = ({
+  tickets,
+  isLoading,
+  vertical,
+  unlimitedWidth,
+  grid = false,
+}) => {
   if (isLoading) {
     return <Loading />;
   }
@@ -22,14 +30,28 @@ const TicketsList: React.FC<iProps> = ({ tickets, isLoading, vertical }) => {
 
   return (
     <ul
-      className={`mt-5 flex gap-5 pr-5 ${
-        vertical
-          ? "flex-col max-h-[800px] overflow-y-auto"
-          : "overflow-x-auto flex-row lg:max-w-[1320px] lg:overflow-x-scroll pb-5"
-      } ml-5`}
+      className={`mt-5 ${
+        grid
+          ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 px-5 pb-5"
+          : `flex gap-5 ${
+              vertical
+                ? "flex-col max-h-[800px] overflow-y-auto"
+                : `flex-row items-stretch ${
+                    unlimitedWidth
+                      ? "max-w-full-unlimited pb-5"
+                      : "flex-wrap justify-center lg:max-w-[1320px] pb-5"
+                  }`
+            } px-5`
+      }`}
     >
       {tickets.map((ticket) => (
-        <EventCard key={ticket.id} ticket={ticket} vertical={vertical} />
+        <EventCard
+          key={ticket.id}
+          ticket={ticket}
+          vertical={vertical}
+          unlimitedWidth={unlimitedWidth}
+          grid={grid}
+        />
       ))}
     </ul>
   );

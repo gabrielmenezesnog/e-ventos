@@ -13,10 +13,10 @@ const Input = ({
   max = null,
 }: iInputProps) => {
   const baseClass =
-    "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 mb-0";
+    "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 mb-0 box-border";
 
   return (
-    <div className="space-y-1">
+    <div className="space-y-1 w-full">
       {label && (
         <label htmlFor={id} className="block text-sm font-medium text-gray-700">
           {label}

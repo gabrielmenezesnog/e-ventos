@@ -18,14 +18,16 @@
     "subtitle": "CHOOSE THE BEST FOR YOU"
   },
   "filters": {
-    "name": "Name",
+    "name": "Search",
     "startDate": "Start Date",
     "endDate": "End Date",
     "location": "Location",
     "minPrice": "Minimum Price",
     "maxPrice": "Maximum Price",
     "filterButton": "Filter",
-    "clearFilters": "Clear Filters"
+    "clearFilters": "Clear Filters",
+    "advancedFilters": "Advanced Filters",
+    "resultsCount": "Results found"
   },
   "eventBuy": {
     "ticketType": "TICKET TYPE",
@@ -36,7 +38,23 @@
     "selectedTickets": "SELECTED TICKETS",
     "totalValue": "TOTAL VALUE",
     "addToCart": "ADD TO CART",
-    "information": "INFORMATION"
+    "information": "INFORMATION",
+    "quantityUnavailable": "Quantity unavailable",
+    "date": "Date",
+    "location": "Location",
+    "sold": "Sold",
+    "remaining": "Remaining"
+  },
+  "eventCard": {
+    "buy": "Buy",
+    "ticketsSold": "tickets sold!"
+  },
+  "eventPage": {
+    "ticketNotFound": "Error: Ticket not found",
+    "track": "TRACK"
+  },
+  "pageHeader": {
+    "pageTitle": "Page Title"
   },
   "cart": {
     "title": "Cart",
@@ -71,5 +89,47 @@
     "loading": "Loading...",
     "error": "Error",
     "success": "Success"
+  },
+  "ticketTypes": {
+    "VIP": "VIP",
+    "FLOOR": "Floor",
+    "HALF_PRICE": "Half Price",
+    "FULL_PASS": "Full Pass",
+    "DAILY_PASS": "Daily Pass",
+    "DAY_PASS": "Day Pass",
+    "GENERAL": "General",
+    "PREMIUM": "Premium",
+    "STANDARD": "Standard",
+    "FRONT_ROW": "Front Row",
+    "FULL_ACCESS": "Full Access",
+    "GENERAL_ACCESS": "General Access",
+    "GENERAL_ADMISSION": "General Admission",
+    "GRANDSTAND": "Grandstand",
+    "PREMIUM_SEAT": "Premium Seat",
+    "BOX_SEAT": "Box Seat",
+    "STANDS": "Stands",
+    "VIP_AREA": "VIP Area",
+    "VIP_DINING": "VIP Dining",
+    "VIP_INVESTOR": "VIP Investor",
+    "VIP_TASTING": "VIP Tasting",
+    "FULL_CONFERENCE": "Full Conference",
+    "FULL_DAY": "Full Day",
+    "FULL_EVENT": "Full Event",
+    "SINGLE_DAY": "Single Day",
+    "STUDENT": "Student"
+  },
+  "insights": {
+    "title": "Discover the",
+    "titleHighlight": "Trends",
+    "categoryDistribution": "Distribution by Category",
+    "topGenres": "Most Popular Genres",
+    "filterAll": "All",
+    "filterTop5": "Top 5",
+    "filterTop10": "Top 10",
+    "filterDetails": "View Details",
+    "totalEvents": "Total Events",
+    "totalSales": "Total Sales",
+    "categoryBreakdown": "Category Breakdown",
+    "genreBreakdown": "Genre Breakdown"
   }
 }

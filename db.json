@@ -1,65 +1,71 @@
 {
   "user": {
     "id": 1,
-    "email": "Gabrieldois",
-    "password": "30122001"
+    "email": "teste",
+    "password": "123123"
   },
   "tickets": [
     {
       "id": "1",
       "name": "Pearl Jam",
-      "description": "Uma apresentação épica da lendária banda de rock Pearl Jam, trazendo seus maiores sucessos em uma noite inesquecível.",
+      "description": "An epic performance by legendary rock band Pearl Jam, bringing their greatest hits in an unforgettable night.",
       "date": "2025-03-15T20:00:00",
-      "local": "Estádio Joaquim Américo Guimarães",
-      "price": 200,
+      "local": "Campinas, SP - Estádio Joaquim Américo Guimarães",
+      "price": 40.0,
+      "category": "Music",
+      "genre": "Rock",
+      "duration": "2h 30min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 250,
-          "available_quantity": 1,
-          "sold_quantity": 199
+          "price": 50.0,
+          "available_quantity": 50,
+          "sold_quantity": 150
         },
         {
-          "type": "PISTA",
-          "price": 200,
-          "available_quantity": 200,
-          "sold_quantity": 300
-        },
-        {
-          "type": "MEIA",
-          "price": 150,
-          "available_quantity": 100,
+          "type": "FLOOR",
+          "price": 40.0,
+          "available_quantity": 300,
           "sold_quantity": 200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 30.0,
+          "available_quantity": 150,
+          "sold_quantity": 100
         }
       ],
       "total_tickets": 1000,
-      "sold_quantity": 603,
-      "available_quantity": 397,
+      "sold_quantity": 450,
+      "available_quantity": 550,
       "image_url": "https://cdn-images.dzcdn.net/images/artist/3e279f4e0269fdb2733474ddfa074a91/500x500.jpg"
     },
     {
       "id": "2",
       "name": "Foo Fighters",
-      "description": "Show eletrizante do Foo Fighters, repleto de energia e clássicos do rock.",
+      "description": "An electrifying show by Foo Fighters, full of energy and rock classics.",
       "date": "2025-04-20T21:00:00",
-      "local": "Allianz Parque",
-      "price": 220,
+      "local": "São Paulo, SP - Allianz Parque",
+      "price": 44.0,
+      "category": "Music",
+      "genre": "Rock",
+      "duration": "2h 15min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 270,
+          "price": 54.0,
           "available_quantity": 120,
           "sold_quantity": 80
         },
         {
-          "type": "PISTA",
-          "price": 220,
+          "type": "FLOOR",
+          "price": 44.0,
           "available_quantity": 250,
           "sold_quantity": 350
         },
         {
-          "type": "MEIA",
-          "price": 170,
+          "type": "HALF_PRICE",
+          "price": 34.0,
           "available_quantity": 130,
           "sold_quantity": 170
         }
@@ -72,58 +78,64 @@
     {
       "id": "3",
       "name": "Red Hot Chili Peppers",
-      "description": "A lendária banda californiana traz sua mistura única de rock e funk para um show inesquecível.",
+      "description": "The legendary Californian band brings their unique mix of rock and funk for an unforgettable show.",
       "date": "2025-05-10T19:30:00",
-      "local": "Morumbi Stadium",
-      "price": 230,
+      "local": "São Paulo, SP - Morumbi Stadium",
+      "price": 46.0,
+      "category": "Music",
+      "genre": "Rock",
+      "duration": "2h 45min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 280,
-          "available_quantity": 150,
-          "sold_quantity": 150
+          "price": 56.0,
+          "available_quantity": 149,
+          "sold_quantity": 151
         },
         {
-          "type": "PISTA",
-          "price": 230,
+          "type": "FLOOR",
+          "price": 46.0,
           "available_quantity": 300,
           "sold_quantity": 400
         },
         {
-          "type": "MEIA",
-          "price": 180,
+          "type": "HALF_PRICE",
+          "price": 36.0,
           "available_quantity": 200,
           "sold_quantity": 250
         }
       ],
       "total_tickets": 1300,
-      "sold_quantity": 800,
-      "available_quantity": 500,
+      "sold_quantity": 801,
+      "available_quantity": 499,
       "image_url": "https://cdn-images.dzcdn.net/images/artist/1f807c8a8a9c4f98eebd38a3f6431d34/500x500.jpg"
     },
     {
       "id": "4",
       "name": "Metallica",
-      "description": "O peso do heavy metal com a potência do Metallica, em um show histórico.",
+      "description": "The power of heavy metal with Metallica's potency in a historic show.",
       "date": "2025-06-18T20:30:00",
-      "local": "Arena Corinthians",
-      "price": 250,
+      "local": "São Paulo, SP - Arena Corinthians",
+      "price": 50.0,
+      "category": "Music",
+      "genre": "Heavy Metal",
+      "duration": "2h 30min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 300,
+          "price": 60.0,
           "available_quantity": 100,
           "sold_quantity": 200
         },
         {
-          "type": "PISTA",
-          "price": 250,
+          "type": "FLOOR",
+          "price": 50.0,
           "available_quantity": 200,
           "sold_quantity": 300
         },
         {
-          "type": "MEIA",
-          "price": 200,
+          "type": "HALF_PRICE",
+          "price": 40.0,
           "available_quantity": 100,
           "sold_quantity": 200
         }
@@ -136,26 +148,29 @@
     {
       "id": "5",
       "name": "Coldplay",
-      "description": "A banda britânica Coldplay traz sua turnê mundial para um show emocionante e cheio de efeitos visuais.",
+      "description": "The British band Coldplay brings their world tour for an exciting show full of visual effects.",
       "date": "2025-07-25T20:00:00",
-      "local": "Maracanã",
-      "price": 280,
+      "local": "Rio de Janeiro, RJ - Maracanã Stadium",
+      "price": 56.0,
+      "category": "Music",
+      "genre": "Pop Rock",
+      "duration": "2h 20min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 350,
+          "price": 70.0,
           "available_quantity": 200,
           "sold_quantity": 300
         },
         {
-          "type": "PISTA",
-          "price": 280,
+          "type": "FLOOR",
+          "price": 56.0,
           "available_quantity": 400,
           "sold_quantity": 600
         },
         {
-          "type": "MEIA",
-          "price": 220,
+          "type": "HALF_PRICE",
+          "price": 44.0,
           "available_quantity": 250,
           "sold_quantity": 300
         }
@@ -168,26 +183,29 @@
     {
       "id": "6",
       "name": "The Weeknd",
-      "description": "Uma noite inesquecível com The Weeknd, repleta de hits e performances envolventes.",
+      "description": "An unforgettable night with The Weeknd, full of hits and engaging performances.",
       "date": "2025-08-15T21:00:00",
-      "local": "Mineirão",
-      "price": 260,
+      "local": "Belo Horizonte, MG - Mineirão Stadium",
+      "price": 52.0,
+      "category": "Music",
+      "genre": "Pop",
+      "duration": "2h 10min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 320,
+          "price": 64.0,
           "available_quantity": 180,
           "sold_quantity": 200
         },
         {
-          "type": "PISTA",
-          "price": 260,
+          "type": "FLOOR",
+          "price": 52.0,
           "available_quantity": 350,
           "sold_quantity": 450
         },
         {
-          "type": "MEIA",
-          "price": 200,
+          "type": "HALF_PRICE",
+          "price": 40.0,
           "available_quantity": 200,
           "sold_quantity": 250
         }
@@ -200,58 +218,64 @@
     {
       "id": "7",
       "name": "Ed Sheeran",
-      "description": "O cantor e compositor britânico traz seus sucessos românticos para uma noite memorável.",
+      "description": "The British singer-songwriter brings his romantic hits for a memorable night.",
       "date": "2025-09-10T20:30:00",
-      "local": "Estádio Beira-Rio",
-      "price": 240,
+      "local": "Porto Alegre, RS - Estádio Beira-Rio",
+      "price": 48.0,
+      "category": "Music",
+      "genre": "Pop",
+      "duration": "2h 25min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 300,
+          "price": 60.0,
           "available_quantity": 180,
           "sold_quantity": 250
         },
         {
-          "type": "PISTA",
-          "price": 240,
+          "type": "FLOOR",
+          "price": 48.0,
           "available_quantity": 350,
           "sold_quantity": 400
         },
         {
-          "type": "MEIA",
-          "price": 190,
+          "type": "HALF_PRICE",
+          "price": 38.0,
           "available_quantity": 200,
           "sold_quantity": 250
         }
       ],
-      "total_tickets": 1630,
+      "total_tickets": 1300,
       "sold_quantity": 900,
-      "available_quantity": 730,
-      "image_url": "https://cdn-images.dzcdn.net/images/artist/b4c0080a223e4d6784b36c4a1a3e058b/500x500.jpg"
+      "available_quantity": 400,
+      "image_url": "https://cdn-images.dzcdn.net/images/artist/7a7f3e2e74c648429bcc2dff7c3ffadf/500x500.jpg"
     },
     {
       "id": "8",
       "name": "Adele",
-      "description": "A poderosa voz de Adele em uma apresentação intimista e emocionante.",
+      "description": "Adele's powerful voice in an intimate and emotional presentation.",
       "date": "2025-10-05T19:00:00",
-      "local": "Jeunesse Arena",
-      "price": 300,
+      "local": "Rio de Janeiro, RJ - Jeunesse Arena",
+      "price": 60.0,
+      "category": "Music",
+      "genre": "Pop",
+      "duration": "2h 15min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 380,
+          "price": 76.0,
           "available_quantity": 150,
           "sold_quantity": 250
         },
         {
-          "type": "PISTA",
-          "price": 300,
+          "type": "FLOOR",
+          "price": 60.0,
           "available_quantity": 300,
           "sold_quantity": 450
         },
         {
-          "type": "MEIA",
-          "price": 240,
+          "type": "HALF_PRICE",
+          "price": 48.0,
           "available_quantity": 180,
           "sold_quantity": 220
         }
@@ -264,26 +288,29 @@
     {
       "id": "9",
       "name": "Bruno Mars",
-      "description": "Um show cheio de energia e carisma com os maiores sucessos de Bruno Mars.",
+      "description": "An energetic and charismatic show with Bruno Mars' greatest hits.",
       "date": "2025-11-20T21:00:00",
-      "local": "Estádio Nilton Santos",
-      "price": 270,
+      "local": "Rio de Janeiro, RJ - Estádio Nilton Santos",
+      "price": 54.0,
+      "category": "Music",
+      "genre": "Pop",
+      "duration": "2h 30min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 350,
+          "price": 70.0,
           "available_quantity": 200,
           "sold_quantity": 300
         },
         {
-          "type": "PISTA",
-          "price": 270,
+          "type": "FLOOR",
+          "price": 54.0,
           "available_quantity": 400,
           "sold_quantity": 500
         },
         {
-          "type": "MEIA",
-          "price": 210,
+          "type": "HALF_PRICE",
+          "price": 42.0,
           "available_quantity": 250,
           "sold_quantity": 250
         }
@@ -296,26 +323,29 @@
     {
       "id": "10",
       "name": "Taylor Swift",
-      "description": "Uma experiência única com Taylor Swift, repleta de hits e performances icônicas.",
+      "description": "A unique experience with Taylor Swift, full of hits and iconic performances.",
       "date": "2025-12-15T20:00:00",
-      "local": "Morumbi Stadium",
-      "price": 320,
+      "local": "São Paulo, SP - Morumbi Stadium",
+      "price": 64.0,
+      "category": "Music",
+      "genre": "Pop",
+      "duration": "2h 45min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 400,
+          "price": 80.0,
           "available_quantity": 150,
           "sold_quantity": 250
         },
         {
-          "type": "PISTA",
-          "price": 320,
+          "type": "FLOOR",
+          "price": 64.0,
           "available_quantity": 300,
           "sold_quantity": 450
         },
         {
-          "type": "MEIA",
-          "price": 260,
+          "type": "HALF_PRICE",
+          "price": 52.0,
           "available_quantity": 180,
           "sold_quantity": 220
         }
@@ -324,64 +354,1563 @@
       "sold_quantity": 920,
       "available_quantity": 380,
       "image_url": "https://cdn-images.dzcdn.net/images/artist/8f93c2e876e3476fa7b8a0f65d7a42a1/500x500.jpg"
-    }
-  ],
-  "best_sellers": [
-    {
-      "id": "3",
-      "name": "Red Hot Chili Peppers",
-      "description": "A lendária banda californiana traz sua mistura única de rock e funk para um show inesquecível.",
-      "date": "2025-05-10T19:30:00",
-      "local": "Morumbi Stadium",
-      "price": 230,
-      "ticket_types": [
-        {
-          "type": "VIP",
-          "price": 280,
-          "available_quantity": 150,
-          "sold_quantity": 150
-        },
-        {
-          "type": "PISTA",
-          "price": 230,
-          "available_quantity": 300,
-          "sold_quantity": 400
-        },
-        {
-          "type": "MEIA",
-          "price": 180,
-          "available_quantity": 200,
-          "sold_quantity": 250
-        }
-      ],
-      "total_tickets": 1300,
-      "sold_quantity": 800,
-      "available_quantity": 500,
-      "image_url": "https://cdn-images.dzcdn.net/images/artist/1f807c8a8a9c4f98eebd38a3f6431d34/500x500.jpg"
     },
     {
-      "id": "5",
-      "name": "Coldplay",
-      "description": "A banda britânica Coldplay traz sua turnê mundial para um show emocionante e cheio de efeitos visuais.",
-      "date": "2025-07-25T20:00:00",
-      "local": "Maracanã",
-      "price": 280,
+      "id": "11",
+      "name": "Rock in Rio 2025",
+      "description": "The world's largest rock festival returns with multiple stages and international artists.",
+      "date": "2025-09-12T18:00:00",
+      "local": "Rio de Janeiro, RJ - City of Rock",
+      "price": 90.0,
+      "category": "Festival",
+      "genre": "Rock",
+      "duration": "3 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 90.0,
+          "available_quantity": 2000,
+          "sold_quantity": 8000
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 36.0,
+          "available_quantity": 5000,
+          "sold_quantity": 15000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 18.0,
+          "available_quantity": 1000,
+          "sold_quantity": 3000
+        }
+      ],
+      "total_tickets": 25000,
+      "sold_quantity": 26000,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+    },
+    {
+      "id": "12",
+      "name": "Tomorrowland Brazil",
+      "description": "The world's biggest electronic music festival arrives in Brazil with world-class DJs and spectacular visual effects.",
+      "date": "2025-04-25T12:00:00",
+      "local": "Itu, SP - Autódromo José Carlos Pace",
+      "price": 76.0,
+      "category": "Festival",
+      "genre": "Electronic",
+      "duration": "2 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 76.0,
+          "available_quantity": 1500,
+          "sold_quantity": 8500
+        },
+        {
+          "type": "DAY_PASS",
+          "price": 44.0,
+          "available_quantity": 3000,
+          "sold_quantity": 7000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 22.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        }
+      ],
+      "total_tickets": 20000,
+      "sold_quantity": 17000,
+      "available_quantity": 3000,
+      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500"
+    },
+    {
+      "id": "13",
+      "name": "Lollapalooza Brazil",
+      "description": "Brazil's biggest alternative music festival featuring international and national artists across multiple stages.",
+      "date": "2025-03-28T11:00:00",
+      "local": "São Paulo, SP - Autódromo de Interlagos",
+      "price": 84.0,
+      "category": "Festival",
+      "genre": "Alternative",
+      "duration": "3 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 84.0,
+          "available_quantity": 3000,
+          "sold_quantity": 12000
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 32.0,
+          "available_quantity": 5000,
+          "sold_quantity": 10000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 16.0,
+          "available_quantity": 1500,
+          "sold_quantity": 3000
+        }
+      ],
+      "total_tickets": 30000,
+      "sold_quantity": 28000,
+      "available_quantity": 2000,
+      "image_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500"
+    },
+    {
+      "id": "14",
+      "name": "Brazil vs Argentina - World Cup Qualifier",
+      "description": "The classic South American football rivalry in a decisive World Cup qualifying match.",
+      "date": "2025-11-15T21:00:00",
+      "local": "São Paulo, SP - Morumbi Stadium",
+      "price": 36.0,
+      "category": "Sports",
+      "genre": "Football",
+      "duration": "2h 15min",
       "ticket_types": [
         {
           "type": "VIP",
-          "price": 350,
+          "price": 56.0,
+          "available_quantity": 500,
+          "sold_quantity": 500
+        },
+        {
+          "type": "GENERAL",
+          "price": 36.0,
+          "available_quantity": 2000,
+          "sold_quantity": 3000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 18.0,
+          "available_quantity": 1000,
+          "sold_quantity": 1500
+        }
+      ],
+      "total_tickets": 6000,
+      "sold_quantity": 5000,
+      "available_quantity": 1000,
+      "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500"
+    },
+    {
+      "id": "15",
+      "name": "São Paulo vs Palmeiras - Paulista Championship Final",
+      "description": "The biggest derby in Brazilian football, deciding the state championship title.",
+      "date": "2025-04-12T16:00:00",
+      "local": "São Paulo, SP - Morumbi Stadium",
+      "price": 24.0,
+      "category": "Sports",
+      "genre": "Football",
+      "duration": "2h 15min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 40.0,
+          "available_quantity": 300,
+          "sold_quantity": 200
+        },
+        {
+          "type": "GENERAL",
+          "price": 24.0,
+          "available_quantity": 1500,
+          "sold_quantity": 2500
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 12.0,
+          "available_quantity": 700,
+          "sold_quantity": 800
+        }
+      ],
+      "total_tickets": 4000,
+      "sold_quantity": 3500,
+      "available_quantity": 500,
+      "image_url": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500"
+    },
+    {
+      "id": "16",
+      "name": "Hamilton - Broadway Musical",
+      "description": "The award-winning musical about Alexander Hamilton's life, featuring incredible music and performances.",
+      "date": "2025-08-08T20:00:00",
+      "local": "São Paulo, SP - Teatro Municipal",
+      "price": 70.0,
+      "category": "Theater",
+      "genre": "Musical",
+      "duration": "2h 45min",
+      "ticket_types": [
+        {
+          "type": "PREMIUM",
+          "price": 90.0,
+          "available_quantity": 50,
+          "sold_quantity": 50
+        },
+        {
+          "type": "STANDARD",
+          "price": 70.0,
           "available_quantity": 200,
           "sold_quantity": 300
         },
         {
-          "type": "PISTA",
-          "price": 280,
+          "type": "HALF_PRICE",
+          "price": 35.0,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        }
+      ],
+      "total_tickets": 800,
+      "sold_quantity": 500,
+      "available_quantity": 300,
+      "image_url": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=500"
+    },
+    {
+      "id": "17",
+      "name": "The Phantom of the Opera",
+      "description": "The longest-running musical in history returns to Brazil with its spectacular production.",
+      "date": "2025-06-22T21:00:00",
+      "local": "Rio de Janeiro, RJ - Theatro Municipal",
+      "price": 64.0,
+      "category": "Theater",
+      "genre": "Musical",
+      "duration": "2h 30min",
+      "ticket_types": [
+        {
+          "type": "PREMIUM",
+          "price": 84.0,
+          "available_quantity": 40,
+          "sold_quantity": 60
+        },
+        {
+          "type": "STANDARD",
+          "price": 64.0,
+          "available_quantity": 180,
+          "sold_quantity": 270
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 32.0,
+          "available_quantity": 90,
+          "sold_quantity": 135
+        }
+      ],
+      "total_tickets": 700,
+      "sold_quantity": 465,
+      "available_quantity": 235,
+      "image_url": "https://images.unsplash.com/photo-1489599689857-8e617a1892d7?w=500"
+    },
+    {
+      "id": "18",
+      "name": "Cirque du Soleil - Alegria",
+      "description": "A magical circus show featuring acrobats, clowns, and spectacular performances under the big top.",
+      "date": "2025-07-14T19:30:00",
+      "local": "São Paulo, SP - Jockey Club",
+      "price": 56.0,
+      "category": "Circus",
+      "genre": "Entertainment",
+      "duration": "2h 15min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 76.0,
+          "available_quantity": 100,
+          "sold_quantity": 100
+        },
+        {
+          "type": "STANDARD",
+          "price": 56.0,
           "available_quantity": 400,
           "sold_quantity": 600
         },
         {
-          "type": "MEIA",
-          "price": 220,
+          "type": "HALF_PRICE",
+          "price": 28.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1400,
+      "sold_quantity": 1000,
+      "available_quantity": 400,
+      "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+    },
+    {
+      "id": "19",
+      "name": "Dua Lipa",
+      "description": "The pop sensation brings her Future Nostalgia tour with hits and incredible choreography.",
+      "date": "2025-05-03T20:30:00",
+      "local": "Rio de Janeiro, RJ - Jeunesse Arena",
+      "price": 58.0,
+      "category": "Music",
+      "genre": "Pop",
+      "duration": "2h 10min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 72.0,
+          "available_quantity": 150,
+          "sold_quantity": 200
+        },
+        {
+          "type": "FLOOR",
+          "price": 58.0,
+          "available_quantity": 350,
+          "sold_quantity": 450
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 29.0,
+          "available_quantity": 175,
+          "sold_quantity": 225
+        }
+      ],
+      "total_tickets": 1300,
+      "sold_quantity": 875,
+      "available_quantity": 425,
+      "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+    },
+    {
+      "id": "20",
+      "name": "Billie Eilish",
+      "description": "The Grammy-winning artist presents her unique style and powerful voice in an intimate setting.",
+      "date": "2025-09-28T21:00:00",
+      "local": "São Paulo, SP - Espaço Unimed",
+      "price": 62.0,
+      "category": "Music",
+      "genre": "Alternative Pop",
+      "duration": "1h 45min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 76.0,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        },
+        {
+          "type": "FLOOR",
+          "price": 62.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 31.0,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        }
+      ],
+      "total_tickets": 800,
+      "sold_quantity": 600,
+      "available_quantity": 200,
+      "image_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500"
+    },
+    {
+      "id": "21",
+      "name": "Bad Bunny",
+      "description": "The Latin trap king brings his explosive energy and hits to Brazil for the first time.",
+      "date": "2025-10-18T22:00:00",
+      "local": "São Paulo, SP - Allianz Parque",
+      "price": 56.0,
+      "category": "Music",
+      "genre": "Latin Trap",
+      "duration": "2h 30min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 76.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "FLOOR",
+          "price": 56.0,
+          "available_quantity": 500,
+          "sold_quantity": 1000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 28.0,
+          "available_quantity": 250,
+          "sold_quantity": 500
+        }
+      ],
+      "total_tickets": 2500,
+      "sold_quantity": 1800,
+      "available_quantity": 700,
+      "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+    },
+    {
+      "id": "22",
+      "name": "Harry Styles",
+      "description": "The former One Direction member brings his solo tour with incredible production and hits.",
+      "date": "2025-06-05T20:00:00",
+      "local": "Rio de Janeiro, RJ - Maracanã Stadium",
+      "price": 64.0,
+      "category": "Music",
+      "genre": "Pop Rock",
+      "duration": "2h 20min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 84.0,
+          "available_quantity": 300,
+          "sold_quantity": 200
+        },
+        {
+          "type": "FLOOR",
+          "price": 64.0,
+          "available_quantity": 600,
+          "sold_quantity": 900
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 32.0,
+          "available_quantity": 300,
+          "sold_quantity": 450
+        }
+      ],
+      "total_tickets": 2400,
+      "sold_quantity": 1550,
+      "available_quantity": 850,
+      "image_url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500"
+    },
+    {
+      "id": "23",
+      "name": "São Paulo Fashion Week",
+      "description": "Brazil's biggest fashion event featuring the latest trends and international designers.",
+      "date": "2025-11-08T14:00:00",
+      "local": "São Paulo, SP - Anhembi Convention Center",
+      "price": 17.0,
+      "category": "Fashion",
+      "genre": "Fashion Show",
+      "duration": "5 days",
+      "ticket_types": [
+        {
+          "type": "FULL_ACCESS",
+          "price": 30.0,
+          "available_quantity": 500,
+          "sold_quantity": 1500
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 17.0,
+          "available_quantity": 1000,
+          "sold_quantity": 2000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 8.4,
+          "available_quantity": 300,
+          "sold_quantity": 600
+        }
+      ],
+      "total_tickets": 5000,
+      "sold_quantity": 4100,
+      "available_quantity": 900,
+      "image_url": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=500"
+    },
+    {
+      "id": "24",
+      "name": "Comic Con Brazil",
+      "description": "The biggest pop culture event in Latin America with celebrities, panels, and exclusive merchandise.",
+      "date": "2025-12-05T10:00:00",
+      "local": "São Paulo, SP - Expo Center Norte",
+      "price": 19.0,
+      "category": "Convention",
+      "genre": "Pop Culture",
+      "duration": "4 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 36.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 19.0,
+          "available_quantity": 1500,
+          "sold_quantity": 2500
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 9.4,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        }
+      ],
+      "total_tickets": 6000,
+      "sold_quantity": 4300,
+      "available_quantity": 1700,
+      "image_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500"
+    },
+    {
+      "id": "25",
+      "name": "NBA All-Stars Exhibition",
+      "description": "NBA stars showcase their skills in an exhibition game featuring the best players from around the world.",
+      "date": "2025-02-28T19:00:00",
+      "local": "São Paulo, SP - Ginásio do Ibirapuera",
+      "price": 30.0,
+      "category": "Sports",
+      "genre": "Basketball",
+      "duration": "2h 30min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 50.0,
+          "available_quantity": 200,
+          "sold_quantity": 100
+        },
+        {
+          "type": "GENERAL",
+          "price": 30.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 15.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        }
+      ],
+      "total_tickets": 2000,
+      "sold_quantity": 1900,
+      "available_quantity": 100,
+      "image_url": "https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?w=500"
+    },
+    {
+      "id": "26",
+      "name": "UFC 300",
+      "description": "The milestone UFC event features championship fights and the biggest names in MMA.",
+      "date": "2025-04-05T22:00:00",
+      "local": "Rio de Janeiro, RJ - Jeunesse Arena",
+      "price": 40.0,
+      "category": "Sports",
+      "genre": "MMA",
+      "duration": "4h 00min",
+      "ticket_types": [
+        {
+          "type": "FRONT_ROW",
+          "price": 70.0,
+          "available_quantity": 100,
+          "sold_quantity": 200
+        },
+        {
+          "type": "GENERAL",
+          "price": 40.0,
+          "available_quantity": 500,
+          "sold_quantity": 1000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 20.0,
+          "available_quantity": 250,
+          "sold_quantity": 500
+        }
+      ],
+      "total_tickets": 2000,
+      "sold_quantity": 1700,
+      "available_quantity": 300,
+      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500"
+    },
+    {
+      "id": "27",
+      "name": "Wimbledon Qualifiers Brazil",
+      "description": "Tennis stars compete in qualifying matches for the prestigious Wimbledon tournament.",
+      "date": "2025-06-10T10:00:00",
+      "local": "Rio de Janeiro, RJ - Olympic Tennis Centre",
+      "price": 16.0,
+      "category": "Sports",
+      "genre": "Tennis",
+      "duration": "3 days",
+      "ticket_types": [
+        {
+          "type": "DAILY_PASS",
+          "price": 16.0,
+          "available_quantity": 300,
+          "sold_quantity": 700
+        },
+        {
+          "type": "FULL_EVENT",
+          "price": 40.0,
+          "available_quantity": 100,
+          "sold_quantity": 200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 8.0,
+          "available_quantity": 150,
+          "sold_quantity": 350
+        }
+      ],
+      "total_tickets": 1500,
+      "sold_quantity": 1250,
+      "available_quantity": 250,
+      "image_url": "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=500"
+    },
+    {
+      "id": "28",
+      "name": "Brazil Grand Prix - Formula 1",
+      "description": "The roar of F1 engines returns to Interlagos with the world's best drivers competing for victory.",
+      "date": "2025-11-02T14:00:00",
+      "local": "São Paulo, SP - Autódromo de Interlagos",
+      "price": 70.0,
+      "category": "Sports",
+      "genre": "Formula 1",
+      "duration": "3h 00min",
+      "ticket_types": [
+        {
+          "type": "GRANDSTAND",
+          "price": 70.0,
+          "available_quantity": 1000,
+          "sold_quantity": 2000
+        },
+        {
+          "type": "GENERAL_ADMISSION",
+          "price": 36.0,
+          "available_quantity": 2000,
+          "sold_quantity": 3000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 18.0,
+          "available_quantity": 1000,
+          "sold_quantity": 1500
+        }
+      ],
+      "total_tickets": 8000,
+      "sold_quantity": 6500,
+      "available_quantity": 1500,
+      "image_url": "https://images.unsplash.com/photo-1581838493172-57337c682a31?w=500"
+    },
+    {
+      "id": "29",
+      "name": "Cirque du Soleil - OVO",
+      "description": "A breathtaking show featuring acrobats, contortionists, and incredible feats of human capability.",
+      "date": "2025-08-30T20:00:00",
+      "local": "Belo Horizonte, MG - Mineirinho Arena",
+      "price": 52.0,
+      "category": "Circus",
+      "genre": "Entertainment",
+      "duration": "2h 20min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 72.0,
+          "available_quantity": 80,
+          "sold_quantity": 120
+        },
+        {
+          "type": "STANDARD",
+          "price": 52.0,
+          "available_quantity": 300,
+          "sold_quantity": 450
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 26.0,
+          "available_quantity": 150,
+          "sold_quantity": 225
+        }
+      ],
+      "total_tickets": 1000,
+      "sold_quantity": 795,
+      "available_quantity": 205,
+      "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+    },
+    {
+      "id": "30",
+      "name": "Ballet - Swan Lake",
+      "description": "Tchaikovsky's masterpiece brought to life by the Brazilian National Ballet Company.",
+      "date": "2025-05-18T19:30:00",
+      "local": "Rio de Janeiro, RJ - Theatro Municipal",
+      "price": 24.0,
+      "category": "Theater",
+      "genre": "Ballet",
+      "duration": "2h 45min",
+      "ticket_types": [
+        {
+          "type": "PREMIUM",
+          "price": 40.0,
+          "available_quantity": 30,
+          "sold_quantity": 70
+        },
+        {
+          "type": "STANDARD",
+          "price": 24.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 12.0,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        }
+      ],
+      "total_tickets": 850,
+      "sold_quantity": 520,
+      "available_quantity": 330,
+      "image_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500"
+    },
+    {
+      "id": "31",
+      "name": "Jazz Festival São Paulo",
+      "description": "Brazil's premier jazz festival featuring international and local jazz musicians in intimate venues.",
+      "date": "2025-07-08T19:00:00",
+      "local": "São Paulo, SP - Various Venues",
+      "price": 36.0,
+      "category": "Festival",
+      "genre": "Jazz",
+      "duration": "4 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 36.0,
+          "available_quantity": 500,
+          "sold_quantity": 1500
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 13.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 6.4,
+          "available_quantity": 250,
+          "sold_quantity": 375
+        }
+      ],
+      "total_tickets": 3000,
+      "sold_quantity": 3075,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+    },
+    {
+      "id": "32",
+      "name": "Electronic Music Festival",
+      "description": "A massive electronic music festival with multiple stages, international DJs, and immersive experiences.",
+      "date": "2025-12-28T22:00:00",
+      "local": "Rio de Janeiro, RJ - Praia de Copacabana",
+      "price": 44.0,
+      "category": "Festival",
+      "genre": "Electronic",
+      "duration": "8h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 70.0,
+          "available_quantity": 1000,
+          "sold_quantity": 2000
+        },
+        {
+          "type": "GENERAL",
+          "price": 44.0,
+          "available_quantity": 3000,
+          "sold_quantity": 7000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 22.0,
+          "available_quantity": 1500,
+          "sold_quantity": 3500
+        }
+      ],
+      "total_tickets": 15000,
+      "sold_quantity": 12500,
+      "available_quantity": 2500,
+      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500"
+    },
+    {
+      "id": "33",
+      "name": "Brazil vs France - Friendly Match",
+      "description": "An international friendly featuring Brazil's national team against France's world champions.",
+      "date": "2025-03-22T20:00:00",
+      "local": "São Paulo, SP - Morumbi Stadium",
+      "price": 32.0,
+      "category": "Sports",
+      "genre": "Football",
+      "duration": "2h 15min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 56.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "GENERAL",
+          "price": 32.0,
+          "available_quantity": 2000,
+          "sold_quantity": 3000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 16.0,
+          "available_quantity": 1000,
+          "sold_quantity": 1500
+        }
+      ],
+      "total_tickets": 6000,
+      "sold_quantity": 5100,
+      "available_quantity": 900,
+      "image_url": "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?w=500"
+    },
+    {
+      "id": "34",
+      "name": "New Year's Eve Celebration",
+      "description": "The biggest New Year's Eve party in South America with fireworks, concerts, and spectacular shows.",
+      "date": "2025-12-31T20:00:00",
+      "local": "Rio de Janeiro, RJ - Copacabana Beach",
+      "price": 30.0,
+      "category": "Celebration",
+      "genre": "Entertainment",
+      "duration": "6h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP_AREA",
+          "price": 70.0,
+          "available_quantity": 500,
+          "sold_quantity": 1500
+        },
+        {
+          "type": "GENERAL_ACCESS",
+          "price": 30.0,
+          "available_quantity": 2000,
+          "sold_quantity": 3000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 15.0,
+          "available_quantity": 1000,
+          "sold_quantity": 1500
+        }
+      ],
+      "total_tickets": 6000,
+      "sold_quantity": 6000,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500"
+    },
+    {
+      "id": "35",
+      "name": "Carnival Parade - Mangueira",
+      "description": "The legendary Mangueira samba school's parade in the Sambadrome with spectacular costumes and music.",
+      "date": "2025-02-15T21:00:00",
+      "local": "Rio de Janeiro, RJ - Sambadrome",
+      "price": 40.0,
+      "category": "Carnival",
+      "genre": "Samba",
+      "duration": "1h 15min",
+      "ticket_types": [
+        {
+          "type": "BOX_SEAT",
+          "price": 70.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "STANDS",
+          "price": 40.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 20.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        }
+      ],
+      "total_tickets": 2000,
+      "sold_quantity": 2100,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500"
+    },
+    {
+      "id": "36",
+      "name": "IMAX Space Documentary",
+      "description": "An immersive IMAX experience exploring the wonders of the universe and space exploration.",
+      "date": "2025-05-12T14:00:00",
+      "local": "São Paulo, SP - Espaço Unimed",
+      "price": 9.0,
+      "category": "Educational",
+      "genre": "Documentary",
+      "duration": "1h 30min",
+      "ticket_types": [
+        {
+          "type": "PREMIUM_SEAT",
+          "price": 13.0,
+          "available_quantity": 50,
+          "sold_quantity": 50
+        },
+        {
+          "type": "STANDARD",
+          "price": 9.0,
+          "available_quantity": 200,
+          "sold_quantity": 100
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 4.4,
+          "available_quantity": 100,
+          "sold_quantity": 50
+        }
+      ],
+      "total_tickets": 500,
+      "sold_quantity": 200,
+      "available_quantity": 300,
+      "image_url": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=500"
+    },
+    {
+      "id": "37",
+      "name": "Stand-up Comedy Night",
+      "description": "Brazil's top comedians unite for an evening of laughter and entertainment.",
+      "date": "2025-09-15T21:00:00",
+      "local": "São Paulo, SP - Teatro Porto Seguro",
+      "price": 17.0,
+      "category": "Comedy",
+      "genre": "Stand-up",
+      "duration": "2h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 30.0,
+          "available_quantity": 50,
+          "sold_quantity": 50
+        },
+        {
+          "type": "GENERAL",
+          "price": 17.0,
+          "available_quantity": 300,
+          "sold_quantity": 200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 8.4,
+          "available_quantity": 150,
+          "sold_quantity": 100
+        }
+      ],
+      "total_tickets": 800,
+      "sold_quantity": 350,
+      "available_quantity": 450,
+      "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500"
+    },
+    {
+      "id": "38",
+      "name": "Classical Music Concert",
+      "description": "Brazilian Symphony Orchestra performs Beethoven's complete symphonies.",
+      "date": "2025-10-25T20:00:00",
+      "local": "Rio de Janeiro, RJ - Theatro Municipal",
+      "price": 19.0,
+      "category": "Music",
+      "genre": "Classical",
+      "duration": "2h 30min",
+      "ticket_types": [
+        {
+          "type": "PREMIUM",
+          "price": 36.0,
+          "available_quantity": 40,
+          "sold_quantity": 60
+        },
+        {
+          "type": "STANDARD",
+          "price": 19.0,
+          "available_quantity": 300,
+          "sold_quantity": 200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 9.4,
+          "available_quantity": 150,
+          "sold_quantity": 100
+        }
+      ],
+      "total_tickets": 800,
+      "sold_quantity": 360,
+      "available_quantity": 440,
+      "image_url": "https://images.unsplash.com/photo-1503095396549-807759245b35?w=500"
+    },
+    {
+      "id": "39",
+      "name": "Magic Show - David Copperfield",
+      "description": "The world's greatest magician performs his most spectacular illusions live.",
+      "date": "2025-08-20T20:30:00",
+      "local": "São Paulo, SP - Credicard Hall",
+      "price": 36.0,
+      "category": "Magic",
+      "genre": "Entertainment",
+      "duration": "2h 15min",
+      "ticket_types": [
+        {
+          "type": "FRONT_ROW",
+          "price": 56.0,
+          "available_quantity": 100,
+          "sold_quantity": 100
+        },
+        {
+          "type": "GENERAL",
+          "price": 36.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 18.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1200,
+      "sold_quantity": 1000,
+      "available_quantity": 200,
+      "image_url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+    },
+    {
+      "id": "40",
+      "name": "Photography Exhibition - National Geographic",
+      "description": "Stunning photographs from around the world showcasing nature, wildlife, and human stories.",
+      "date": "2025-06-01T10:00:00",
+      "local": "São Paulo, SP - Pinacoteca",
+      "price": 6.0,
+      "category": "Exhibition",
+      "genre": "Photography",
+      "duration": "All day",
+      "ticket_types": [
+        {
+          "type": "GENERAL",
+          "price": 6.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 3.0,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        }
+      ],
+      "total_tickets": 750,
+      "sold_quantity": 450,
+      "available_quantity": 300,
+      "image_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500"
+    },
+    {
+      "id": "41",
+      "name": "Wine Tasting Festival",
+      "description": "Brazil's largest wine tasting event featuring international wines and gourmet pairings.",
+      "date": "2025-04-18T14:00:00",
+      "local": "São Paulo, SP - Bienal Pavilion",
+      "price": 24.0,
+      "category": "Food & Drink",
+      "genre": "Wine",
+      "duration": "4h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP_TASTING",
+          "price": 40.0,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        },
+        {
+          "type": "GENERAL_ACCESS",
+          "price": 24.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 12.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1200,
+      "sold_quantity": 1050,
+      "available_quantity": 150,
+      "image_url": "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=500"
+    },
+    {
+      "id": "42",
+      "name": "Brazilian Film Festival",
+      "description": "Showcasing the best of Brazilian cinema with premieres, panels, and celebrity appearances.",
+      "date": "2025-11-10T18:00:00",
+      "local": "Rio de Janeiro, RJ - Cinema Roxy",
+      "price": 5.0,
+      "category": "Film",
+      "genre": "Cinema",
+      "duration": "5 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 16.0,
+          "available_quantity": 300,
+          "sold_quantity": 700
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 5.0,
+          "available_quantity": 500,
+          "sold_quantity": 1000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 2.4,
+          "available_quantity": 250,
+          "sold_quantity": 500
+        }
+      ],
+      "total_tickets": 2500,
+      "sold_quantity": 2200,
+      "available_quantity": 300,
+      "image_url": "https://images.unsplash.com/photo-1489599689857-8e617a1892d7?w=500"
+    },
+    {
+      "id": "43",
+      "name": "Surf Championship - Pipeline Masters",
+      "description": "The world's best surfers compete in the prestigious Pipeline Masters championship.",
+      "date": "2025-01-20T08:00:00",
+      "local": "Florianópolis, SC - Praia da Joaquina",
+      "price": 9.0,
+      "category": "Sports",
+      "genre": "Surfing",
+      "duration": "3 days",
+      "ticket_types": [
+        {
+          "type": "VIP_AREA",
+          "price": 24.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "GENERAL",
+          "price": 9.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 4.4,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        }
+      ],
+      "total_tickets": 2000,
+      "sold_quantity": 2100,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=500"
+    },
+    {
+      "id": "44",
+      "name": "Air Guitar World Championship",
+      "description": "The most ridiculous and entertaining sporting event featuring air guitar champions from around the world.",
+      "date": "2025-08-12T20:00:00",
+      "local": "São Paulo, SP - Audio Club",
+      "price": 7.0,
+      "category": "Sports",
+      "genre": "Entertainment",
+      "duration": "2h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 13.0,
+          "available_quantity": 50,
+          "sold_quantity": 50
+        },
+        {
+          "type": "GENERAL",
+          "price": 7.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 3.4,
+          "available_quantity": 100,
+          "sold_quantity": 150
+        }
+      ],
+      "total_tickets": 600,
+      "sold_quantity": 500,
+      "available_quantity": 100,
+      "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+    },
+    {
+      "id": "45",
+      "name": "Drone Racing Championship",
+      "description": "High-speed drone racing featuring professional pilots and cutting-edge technology.",
+      "date": "2025-07-25T15:00:00",
+      "local": "Brasília, DF - Nilson Nelson Stadium",
+      "price": 8.0,
+      "category": "Sports",
+      "genre": "Technology",
+      "duration": "3h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 16.0,
+          "available_quantity": 100,
+          "sold_quantity": 100
+        },
+        {
+          "type": "GENERAL",
+          "price": 8.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 4.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1200,
+      "sold_quantity": 1000,
+      "available_quantity": 200,
+      "image_url": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500"
+    },
+    {
+      "id": "46",
+      "name": "Virtual Reality Expo",
+      "description": "Experience the future of entertainment with the latest VR games, experiences, and technology.",
+      "date": "2025-09-05T10:00:00",
+      "local": "São Paulo, SP - Expo Center Norte",
+      "price": 11.0,
+      "category": "Technology",
+      "genre": "VR",
+      "duration": "8h 00min",
+      "ticket_types": [
+        {
+          "type": "FULL_DAY",
+          "price": 11.0,
+          "available_quantity": 500,
+          "sold_quantity": 1500
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 5.4,
+          "available_quantity": 250,
+          "sold_quantity": 750
+        }
+      ],
+      "total_tickets": 3000,
+      "sold_quantity": 2250,
+      "available_quantity": 750,
+      "image_url": "https://images.unsplash.com/photo-1592478411213-6153e4ebc696?w=500"
+    },
+    {
+      "id": "47",
+      "name": "AI & Robotics Conference",
+      "description": "Leading experts discuss the future of artificial intelligence and robotics applications.",
+      "date": "2025-10-08T09:00:00",
+      "local": "Rio de Janeiro, RJ - Centro de Convenções",
+      "price": 40.0,
+      "category": "Technology",
+      "genre": "Conference",
+      "duration": "2 days",
+      "ticket_types": [
+        {
+          "type": "FULL_CONFERENCE",
+          "price": 40.0,
+          "available_quantity": 300,
+          "sold_quantity": 700
+        },
+        {
+          "type": "SINGLE_DAY",
+          "price": 24.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 12.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        }
+      ],
+      "total_tickets": 1500,
+      "sold_quantity": 1600,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=500"
+    },
+    {
+      "id": "48",
+      "name": "Sustainability Summit",
+      "description": "Global leaders and activists discuss solutions for environmental challenges and sustainable development.",
+      "date": "2025-05-22T08:30:00",
+      "local": "Salvador, BA - Centro de Convenções",
+      "price": 30.0,
+      "category": "Conference",
+      "genre": "Environment",
+      "duration": "3 days",
+      "ticket_types": [
+        {
+          "type": "FULL_ACCESS",
+          "price": 30.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "STUDENT",
+          "price": 15.0,
+          "available_quantity": 300,
+          "sold_quantity": 200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 7.4,
+          "available_quantity": 200,
+          "sold_quantity": 100
+        }
+      ],
+      "total_tickets": 1500,
+      "sold_quantity": 900,
+      "available_quantity": 600,
+      "image_url": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=500"
+    },
+    {
+      "id": "49",
+      "name": "Startup Pitch Competition",
+      "description": "Entrepreneurs pitch innovative ideas to investors and compete for funding and mentorship.",
+      "date": "2025-11-18T14:00:00",
+      "local": "São Paulo, SP - WeWork Paulista",
+      "price": 5.0,
+      "category": "Business",
+      "genre": "Entrepreneurship",
+      "duration": "4h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP_INVESTOR",
+          "price": 20.0,
+          "available_quantity": 50,
+          "sold_quantity": 50
+        },
+        {
+          "type": "GENERAL",
+          "price": 5.0,
+          "available_quantity": 300,
+          "sold_quantity": 200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 2.4,
+          "available_quantity": 150,
+          "sold_quantity": 100
+        }
+      ],
+      "total_tickets": 750,
+      "sold_quantity": 350,
+      "available_quantity": 400,
+      "image_url": "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=500"
+    },
+    {
+      "id": "50",
+      "name": "International Food Festival",
+      "description": "A culinary journey featuring cuisines from around the world with celebrity chefs and cooking demonstrations.",
+      "date": "2025-03-08T11:00:00",
+      "local": "Curitiba, PR - Parque Barigui",
+      "price": 14.0,
+      "category": "Food & Drink",
+      "genre": "Culinary",
+      "duration": "2 days",
+      "ticket_types": [
+        {
+          "type": "VIP_DINING",
+          "price": 30.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "GENERAL_ACCESS",
+          "price": 14.0,
+          "available_quantity": 600,
+          "sold_quantity": 900
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 7.0,
+          "available_quantity": 300,
+          "sold_quantity": 450
+        }
+      ],
+      "total_tickets": 1600,
+      "sold_quantity": 1650,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500"
+    }
+  ],
+  "best_sellers": [
+    {
+      "id": "11",
+      "name": "Rock in Rio 2025",
+      "description": "The world's largest rock festival returns with multiple stages and international artists.",
+      "date": "2025-09-12T18:00:00",
+      "local": "Rio de Janeiro, RJ - City of Rock",
+      "price": 90.0,
+      "category": "Festival",
+      "genre": "Rock",
+      "duration": "3 days",
+      "ticket_types": [
+        {
+          "type": "FULL_PASS",
+          "price": 90.0,
+          "available_quantity": 2000,
+          "sold_quantity": 8000
+        },
+        {
+          "type": "DAILY_PASS",
+          "price": 36.0,
+          "available_quantity": 5000,
+          "sold_quantity": 15000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 18.0,
+          "available_quantity": 1000,
+          "sold_quantity": 3000
+        }
+      ],
+      "total_tickets": 25000,
+      "sold_quantity": 26000,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500"
+    },
+    {
+      "id": "32",
+      "name": "Electronic Music Festival",
+      "description": "A massive electronic music festival with multiple stages, international DJs, and immersive experiences.",
+      "date": "2025-12-28T22:00:00",
+      "local": "Rio de Janeiro, RJ - Praia de Copacabana",
+      "price": 44.0,
+      "category": "Festival",
+      "genre": "Electronic",
+      "duration": "8h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 70.0,
+          "available_quantity": 1000,
+          "sold_quantity": 2000
+        },
+        {
+          "type": "GENERAL",
+          "price": 44.0,
+          "available_quantity": 3000,
+          "sold_quantity": 7000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 22.0,
+          "available_quantity": 1500,
+          "sold_quantity": 3500
+        }
+      ],
+      "total_tickets": 15000,
+      "sold_quantity": 12500,
+      "available_quantity": 2500,
+      "image_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500"
+    },
+    {
+      "id": "34",
+      "name": "New Year's Eve Celebration",
+      "description": "The biggest New Year's Eve party in South America with fireworks, concerts, and spectacular shows.",
+      "date": "2025-12-31T20:00:00",
+      "local": "Rio de Janeiro, RJ - Copacabana Beach",
+      "price": 30.0,
+      "category": "Celebration",
+      "genre": "Entertainment",
+      "duration": "6h 00min",
+      "ticket_types": [
+        {
+          "type": "VIP_AREA",
+          "price": 70.0,
+          "available_quantity": 500,
+          "sold_quantity": 1500
+        },
+        {
+          "type": "GENERAL_ACCESS",
+          "price": 30.0,
+          "available_quantity": 2000,
+          "sold_quantity": 3000
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 15.0,
+          "available_quantity": 1000,
+          "sold_quantity": 1500
+        }
+      ],
+      "total_tickets": 6000,
+      "sold_quantity": 6000,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500"
+    },
+    {
+      "id": "35",
+      "name": "Carnival Parade - Mangueira",
+      "description": "The legendary Mangueira samba school's parade in the Sambadrome with spectacular costumes and music.",
+      "date": "2025-02-15T21:00:00",
+      "local": "Rio de Janeiro, RJ - Sambadrome",
+      "price": 40.0,
+      "category": "Carnival",
+      "genre": "Samba",
+      "duration": "1h 15min",
+      "ticket_types": [
+        {
+          "type": "BOX_SEAT",
+          "price": 70.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "STANDS",
+          "price": 40.0,
+          "available_quantity": 800,
+          "sold_quantity": 1200
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 20.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        }
+      ],
+      "total_tickets": 2000,
+      "sold_quantity": 2100,
+      "available_quantity": 0,
+      "image_url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500"
+    },
+    {
+      "id": "5",
+      "name": "Coldplay",
+      "description": "The British band Coldplay brings their world tour for an exciting show full of visual effects.",
+      "date": "2025-07-25T20:00:00",
+      "local": "Rio de Janeiro, RJ - Maracanã Stadium",
+      "price": 56.0,
+      "category": "Music",
+      "genre": "Pop Rock",
+      "duration": "2h 20min",
+      "ticket_types": [
+        {
+          "type": "VIP",
+          "price": 70.0,
+          "available_quantity": 200,
+          "sold_quantity": 300
+        },
+        {
+          "type": "FLOOR",
+          "price": 56.0,
+          "available_quantity": 400,
+          "sold_quantity": 600
+        },
+        {
+          "type": "HALF_PRICE",
+          "price": 44.0,
           "available_quantity": 250,
           "sold_quantity": 300
         }
@@ -390,102 +1919,6 @@
       "sold_quantity": 1200,
       "available_quantity": 300,
       "image_url": "https://cdn-images.dzcdn.net/images/artist/2d5dce366c824705bc216f0a3b68cd13/500x500.jpg"
-    },
-    {
-      "id": "7",
-      "name": "Ed Sheeran",
-      "description": "O cantor e compositor britânico traz seus sucessos românticos para uma noite memorável.",
-      "date": "2025-09-10T20:30:00",
-      "local": "Estádio Beira-Rio",
-      "price": 240,
-      "ticket_types": [
-        {
-          "type": "VIP",
-          "price": 300,
-          "available_quantity": 180,
-          "sold_quantity": 250
-        },
-        {
-          "type": "PISTA",
-          "price": 240,
-          "available_quantity": 350,
-          "sold_quantity": 400
-        },
-        {
-          "type": "MEIA",
-          "price": 190,
-          "available_quantity": 200,
-          "sold_quantity": 250
-        }
-      ],
-      "total_tickets": 1300,
-      "sold_quantity": 900,
-      "available_quantity": 400,
-      "image_url": "https://cdn-images.dzcdn.net/images/artist/7a7f3e2e74c648429bcc2dff7c3ffadf/500x500.jpg"
-    },
-    {
-      "id": "9",
-      "name": "Bruno Mars",
-      "description": "Um show cheio de energia e carisma com os maiores sucessos de Bruno Mars.",
-      "date": "2025-11-20T21:00:00",
-      "local": "Estádio Nilton Santos",
-      "price": 270,
-      "ticket_types": [
-        {
-          "type": "VIP",
-          "price": 350,
-          "available_quantity": 200,
-          "sold_quantity": 300
-        },
-        {
-          "type": "PISTA",
-          "price": 270,
-          "available_quantity": 400,
-          "sold_quantity": 500
-        },
-        {
-          "type": "MEIA",
-          "price": 210,
-          "available_quantity": 250,
-          "sold_quantity": 250
-        }
-      ],
-      "total_tickets": 1400,
-      "sold_quantity": 1050,
-      "available_quantity": 350,
-      "image_url": "https://cdn-images.dzcdn.net/images/artist/4c6ff6fb13e84c939ba7dc945b8d63b2/500x500.jpg"
-    },
-    {
-      "id": "10",
-      "name": "Taylor Swift",
-      "description": "Uma experiência única com Taylor Swift, repleta de hits e performances icônicas.",
-      "date": "2025-12-15T20:00:00",
-      "local": "Morumbi Stadium",
-      "price": 320,
-      "ticket_types": [
-        {
-          "type": "VIP",
-          "price": 400,
-          "available_quantity": 150,
-          "sold_quantity": 250
-        },
-        {
-          "type": "PISTA",
-          "price": 320,
-          "available_quantity": 300,
-          "sold_quantity": 450
-        },
-        {
-          "type": "MEIA",
-          "price": 260,
-          "available_quantity": 180,
-          "sold_quantity": 220
-        }
-      ],
-      "total_tickets": 1300,
-      "sold_quantity": 920,
-      "available_quantity": 380,
-      "image_url": "https://cdn-images.dzcdn.net/images/artist/8f93c2e876e3476fa7b8a0f65d7a42a1/500x500.jpg"
     }
   ]
 }
