@@ -10,7 +10,7 @@ const Loading: React.FC<iLoadingProps> = ({ isDark = false }) => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center my-10">
       <p className={`mt-5 ${isDark ? "text-white" : "text-black"}`}>
-        {t('common.loading')}
+        {t("common.loading")}
       </p>
     </div>
   );

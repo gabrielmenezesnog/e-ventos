@@ -1,10 +1,11 @@
 "use client";
 
+import SearchBar from "@/components/atoms/SearchBar";
+import FilterSidebar from "@/components/molecules/FilterSidebar";
 import Button from "@/components/atoms/Button";
-import Input from "@/components/atoms/Input";
 import { iTickets } from "@/interfaces/iTickets";
 import { useTranslation } from "@/hooks/useTranslation";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 interface EventsFilterProps {
   tickets: iTickets[];
@@ -13,6 +14,7 @@ interface EventsFilterProps {
 
 const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
   const { t } = useTranslation();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [name, setName] = useState<string>("");
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
@@ -24,7 +26,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
     new Set(tickets.map((ticket) => ticket.local))
   );
 
-  const filterTickets = () => {
+  const filteredResults = useMemo(() => {
     let filtered = tickets;
 
     if (name) {
@@ -58,10 +60,15 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
       );
     }
 
-    onFilter(filtered);
+    return filtered;
+  }, [tickets, name, startDate, endDate, location, minPrice, maxPrice]);
+
+  const handleApplyFilters = () => {
+    onFilter(filteredResults);
+    setIsSidebarOpen(false);
   };
 
-  const resetFilters = () => {
+  const handleClearFilters = () => {
     setName("");
     setStartDate("");
     setEndDate("");
@@ -69,82 +76,56 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
     setMinPrice("");
     setMaxPrice("");
     onFilter(tickets);
+    setIsSidebarOpen(false);
+  };
+
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+    const filteredByName = tickets.filter((ticket) =>
+      ticket.name.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    onFilter(filteredByName);
   };
 
   return (
-    <div className="flex flex-col gap-4 mb-8">
-      <div className="flex flex-wrap gap-2">
-        <div className="w-full sm:w-auto">
-          <Input
+    <>
+      <div className="flex flex-col gap-4 mb-8">
+        <div className="flex flex-row gap-4 items-center">
+          <SearchBar
             id="name"
-            label={t('filters.name')}
-            type="text"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={handleNameChange}
+            placeholder={t("filters.name")}
           />
-        </div>
 
-        <div className="w-full sm:w-auto">
-          <Input
-            id="startDate"
-            label={t('filters.startDate')}
-            type="date"
-            value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
-          />
-        </div>
-
-        <div className="w-full sm:w-auto">
-          <Input
-            id="endDate"
-            label={t('filters.endDate')}
-            type="date"
-            value={endDate}
-            onChange={(e) => setEndDate(e.target.value)}
-          />
-        </div>
-
-        <div className="w-full sm:w-auto -mt-1">
-          <Input
-            id="location"
-            label={t('filters.location')}
-            type="select"
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            options={locationOptions}
-          />
-        </div>
-
-        <div className="w-full sm:w-auto">
-          <Input
-            id="minPrice"
-            label={t('filters.minPrice')}
-            type="number"
-            value={minPrice}
-            onChange={(e) => setMinPrice(e.target.value)}
-          />
-        </div>
-
-        <div className="w-full sm:w-auto">
-          <Input
-            id="maxPrice"
-            label={t('filters.maxPrice')}
-            type="number"
-            value={maxPrice}
-            onChange={(e) => setMaxPrice(e.target.value)}
+          <Button
+            type="secondary"
+            onClick={() => setIsSidebarOpen(true)}
+            label={t("filters.advancedFilters")}
           />
         </div>
       </div>
 
-      <div className="flex flex-row items-center gap-4">
-        <Button type="default" label={t('filters.filterButton')} onClick={filterTickets} />
-        <Button
-          type="secondary"
-          label={t('filters.clearFilters')}
-          onClick={resetFilters}
-        />
-      </div>
-    </div>
+      <FilterSidebar
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        startDate={startDate}
+        endDate={endDate}
+        location={location}
+        minPrice={minPrice}
+        maxPrice={maxPrice}
+        onStartDateChange={setStartDate}
+        onEndDateChange={setEndDate}
+        onLocationChange={setLocation}
+        onMinPriceChange={setMinPrice}
+        onMaxPriceChange={setMaxPrice}
+        locationOptions={locationOptions}
+        onApply={handleApplyFilters}
+        onClear={handleClearFilters}
+        resultsCount={filteredResults.length}
+        totalCount={tickets.length}
+      />
+    </>
   );
 };
 

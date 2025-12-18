@@ -17,7 +17,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle }) => {
   const { t } = useTranslation();
 
   return (
-    <section aria-label="Título da Página" className="bg-gray_11 p-4">
+    <section aria-label={t('pageHeader.pageTitle')} className="bg-gray_11 p-4">
       <div className="container">
         <Button
           type="default"

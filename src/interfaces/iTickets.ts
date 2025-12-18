@@ -12,4 +12,6 @@ export interface iTickets {
   total_tickets?: number;
   image_url?: string;
   ticket_types?: iTicketType[];
+  category?: string;
+  genre?: string;
 }

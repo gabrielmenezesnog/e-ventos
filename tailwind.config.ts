@@ -19,6 +19,9 @@ export default {
       boxShadow: {
         white: "inset 0 -100px 0 0 white",
       },
+      maxWidth: {
+        'full-unlimited': '2000px',
+      },
     },
   },
   plugins: [],
