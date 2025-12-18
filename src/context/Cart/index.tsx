@@ -1,11 +1,11 @@
 "use client";
 
 import { iCartTicket } from "@/interfaces/iCartTicket";
+import { iComponentWithChildren } from "@/interfaces/iComponent";
 import React, {
   createContext,
   useContext,
   useState,
-  ReactNode,
   useEffect,
 } from "react";
 
@@ -21,7 +21,7 @@ const CartDrawerContext = createContext<CartDrawerContextType | undefined>(
   undefined
 );
 
-export function CartDrawerProvider({ children }: { children: ReactNode }) {
+export function CartDrawerProvider({ children }: iComponentWithChildren) {
   const [isOpen, setIsOpen] = useState(false);
   const [cartTickets, setCartTickets] = useState<iCartTicket[]>([]);
 

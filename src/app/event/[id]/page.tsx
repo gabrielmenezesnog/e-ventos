@@ -1,12 +1,11 @@
 import PageHeader from "@/components/atoms/PageTitle";
 import EventBuySection from "@/components/molecules/EventBuySection";
 import { iTickets } from "@/interfaces/iTickets";
+import { iEventPageParams } from "@/interfaces/iPageParams";
 import { getTicket } from "@/services/tickets/getTicket";
 
 interface EventPageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<iEventPageParams>;
 }
 
 const EventPage = async ({ params }: EventPageProps) => {

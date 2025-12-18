@@ -1,8 +1,9 @@
 import React from "react";
+import { iTicketTypeSimple } from "@/interfaces/iTicketTypeSimple";
 import Button from "../Button";
 
 interface TicketTypeListProps {
-  ticketTypes: { type: string }[];
+  ticketTypes: iTicketTypeSimple[];
   selectedType: string;
   onChangeType: (type: string) => void;
 }

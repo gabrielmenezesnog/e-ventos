@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title": "this is all very",
+    "titleHighlight": "awesome!",
+    "subtitle": "Discover the best events for all styles and occasions. Shows, plays, sports and much more: here you find the ideal ticket to live unforgettable experiences.",
+    "ctaButton": "see events"
+  },
+  "bestSellers": {
+    "title": "most popular",
+    "titleHighlight": "."
+  },
+  "footer": {
+    "contact": "Contact",
+    "rights": "E-Ventos © Some rights reserved."
+  },
+  "events": {
+    "title": "our events",
+    "subtitle": "CHOOSE THE BEST FOR YOU"
+  },
+  "filters": {
+    "name": "Name",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "location": "Location",
+    "minPrice": "Minimum Price",
+    "maxPrice": "Maximum Price",
+    "filterButton": "Filter",
+    "clearFilters": "Clear Filters"
+  },
+  "eventBuy": {
+    "ticketType": "TICKET TYPE",
+    "unitValue": "UNIT VALUE",
+    "quantity": "QUANTITY",
+    "update": "UPDATE",
+    "select": "SELECT",
+    "selectedTickets": "SELECTED TICKETS",
+    "totalValue": "TOTAL VALUE",
+    "addToCart": "ADD TO CART",
+    "information": "INFORMATION"
+  },
+  "cart": {
+    "title": "Cart",
+    "close": "close",
+    "empty": "Your cart is empty.",
+    "quantity": "Quantity:",
+    "itemsValue": "Items value:",
+    "convenienceFee": "Convenience fee:",
+    "total": "TOTAL:",
+    "loginMessage": "Make",
+    "login": "login",
+    "loginSuffix": "to finalize the purchase.",
+    "finishPurchase": "FINISH PURCHASE"
+  },
+  "navigation": {
+    "back": "Back"
+  },
+  "auth": {
+    "pageTitle": "AUTHENTICATION",
+    "pageSubtitle": "LOGIN OR SIGN UP",
+    "joinTitle": "Join us",
+    "loginTitle": "Login to your account",
+    "email": "Email",
+    "password": "Password",
+    "continue": "CONTINUE",
+    "hasAccount": "Already have an account?",
+    "noAccount": "Don't have an account?",
+    "login": "Login",
+    "signUp": "Sign up"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}
