@@ -18,7 +18,7 @@ const Button = ({
   disabled,
 }: iProps) => {
   const defaultClass = "bg-primary text-white font-semibold";
-  const secondaryClass = "font-medium bg-gray_6 text-gray_11";
+  const secondaryClass = "font-medium bg-white text-gray_11 border border-gray-300 hover:bg-gray-50 transition-colors duration-200";
 
   const buttonClass = type === "default" ? defaultClass : secondaryClass;
 

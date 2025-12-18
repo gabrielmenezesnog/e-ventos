@@ -21,6 +21,7 @@ html {
   --gray-6: #9c9c9c;
   --gray-5: #b2b2b2;
   --gray-1: #f7f7f7;
+  --gray-dark-card: #1a1a1a;
 }
 
 body {
@@ -99,7 +100,8 @@ label {
 }
 
 input,
-textarea {
+textarea,
+select {
   display: block;
   border: 1px solid #ccc;
   width: 100%;
@@ -108,7 +110,6 @@ textarea {
   border-radius: var(--radius);
   background: #eee;
   transition: 0.2s;
-  margin-bottom: 1rem;
 }
 
 input[type="checkbox"] {

@@ -204,7 +204,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                 {selectedTicket?.available_quantity !== undefined &&
                   selectedTicket.available_quantity < (ticketQuantity || 1) && (
                   <p className="text-base text-red-500 mt-3">
-                    Quantidade indisponível
+                    {t('eventBuy.quantityUnavailable')}
                   </p>
                 )}
               </div>
@@ -221,7 +221,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                           key={type}
                           className="relative bg-black rounded-md px-3 py-1 pr-4 text-gray_5 w-fit"
                         >
-                          <span>{`${type}: ${quantity}`}</span>
+                          <span>{`${t(`ticketTypes.${type}`)}: ${quantity}`}</span>
                         </li>
                       ))}
                     </ul>
@@ -255,11 +255,11 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                 <div className="bg-black p-6 rounded-md shadow-sm">
                   <ul className="font-normal text-lg space-y-2 text-gray_5">
                     <li>
-                      Data: {new Date(ticket.date).toLocaleDateString("pt-BR")}
+                      {t('eventBuy.date')}: {new Date(ticket.date).toLocaleDateString("pt-BR")}
                     </li>
-                    <li>Local: {ticket.local}</li>
-                    <li>Vendidos: {selectedTicket?.sold_quantity || 0}</li>
-                    <li>Restantes: {selectedTicket?.available_quantity || 0}</li>
+                    <li>{t('eventBuy.location')}: {ticket.local}</li>
+                    <li>{t('eventBuy.sold')}: {selectedTicket?.sold_quantity || 0}</li>
+                    <li>{t('eventBuy.remaining')}: {selectedTicket?.available_quantity || 0}</li>
                   </ul>
                 </div>
               </div>

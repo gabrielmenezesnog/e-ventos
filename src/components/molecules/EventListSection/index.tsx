@@ -16,12 +16,15 @@ const EventListSection = ({ tickets }: iProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const fetchTickets = async () => {
+    const fetchTickets = () => {
       setIsLoading(true);
-      const { data } = await getTickets();
-
-      setFilteredTickets(data);
-      setIsLoading(false);
+      getTickets().then(({ data }) => {
+        setFilteredTickets(data);
+        setIsLoading(false);
+      }).catch((error) => {
+        console.error('Error fetching tickets:', error);
+        setIsLoading(false);
+      });
     };
 
     fetchTickets();
@@ -36,7 +39,7 @@ const EventListSection = ({ tickets }: iProps) => {
       <div className="mb-14">
         <EventsFilter tickets={tickets} onFilter={handleFilter} />
       </div>
-      <TicketsList tickets={filteredTickets} isLoading={isLoading} vertical />
+      <TicketsList tickets={filteredTickets} isLoading={isLoading} grid />
     </>
   );
 };

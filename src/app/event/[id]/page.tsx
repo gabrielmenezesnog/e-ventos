@@ -1,5 +1,5 @@
-import PageHeader from "@/components/atoms/PageTitle";
-import EventBuySection from "@/components/molecules/EventBuySection";
+import { Suspense } from "react";
+import EventPageClient from "./EventPageClient";
 import { iTickets } from "@/interfaces/iTickets";
 import { iEventPageParams } from "@/interfaces/iPageParams";
 import { getTicket } from "@/services/tickets/getTicket";
@@ -13,23 +13,10 @@ const EventPage = async ({ params }: EventPageProps) => {
 
   const ticket: iTickets = await getTicket(id);
 
-  if (!ticket) {
-    return (
-      <div className="p-5">
-        <h1>Erro: Ticket não encontrado</h1>
-      </div>
-    );
-  }
-
   return (
-    <div>
-      <PageHeader
-        title={ticket.name}
-        subtitle={`R$ ${ticket.price.toFixed(2)} | PISTA`}
-      />
-
-      <EventBuySection ticket={ticket} />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <EventPageClient ticket={ticket} />
+    </Suspense>
   );
 };
 

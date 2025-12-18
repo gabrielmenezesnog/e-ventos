@@ -6,6 +6,8 @@ import Footer from "@/components/atoms/Footer";
 import { CartDrawerProvider } from "@/context/Cart";
 import CartDrawer from "@/components/molecules/CartDrawer";
 import { AuthProvider } from "@/context/Auth";
+import { LoadingProvider } from "@/context/Loading";
+import LoadingOverlay from "@/components/atoms/LoadingOverlay";
 
 export const metadata: Metadata = {
   title: "e-ventos",
@@ -21,12 +23,15 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${roboto.variable}`}>
       <body>
         <AuthProvider>
-          <CartDrawerProvider>
-            <Header />
-            <CartDrawer />
-            {children}
-            <Footer />
-          </CartDrawerProvider>
+          <LoadingProvider>
+            <CartDrawerProvider>
+              <Header />
+              <LoadingOverlay />
+              <CartDrawer />
+              {children}
+              <Footer />
+            </CartDrawerProvider>
+          </LoadingProvider>
         </AuthProvider>
       </body>
     </html>

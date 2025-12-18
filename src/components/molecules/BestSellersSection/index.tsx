@@ -23,14 +23,14 @@ const BestSellersSection: React.FC<iProps> = ({ tickets, isLoading }) => {
       <div>
         <div className="container px-5">
           <SectionTitle
-            normalText={t('bestSellers.title')}
-            coloredText={t('bestSellers.titleHighlight')}
+            normalText={t("bestSellers.title")}
+            coloredText={t("bestSellers.titleHighlight")}
             isDark={false}
           />
         </div>
 
-        <div className="flex flex-row justify-center">
-          <TicketsList tickets={tickets} isLoading={isLoading} />
+        <div className="flex flex-row justify-start md:justify-center overflow-x-auto mx-5 md:mx-10">
+          <TicketsList tickets={tickets} isLoading={isLoading} unlimitedWidth />
         </div>
       </div>
     </div>
