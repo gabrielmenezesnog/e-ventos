@@ -1,61 +1,55 @@
-# Projeto Next.js
+# Next.js Project
 
-Este projeto foi criado para testar conhecimentos em Next.js, testes automatizados, Context API e DevOps (deploy).
+This project was created to test knowledge in Next.js, automated testing, Context API, and DevOps (deployment).
 
-## Rodando o projeto
+## Running the project
 
-Primeiro, instale as dependências do projeto:
+First, install the project dependencies:
 
-Nota: Recomenda-se a versão 20 do Node.js.
+> Note: Node.js version 20 is recommended.
 
 ```bash
 npm install
 ```
 
-Depois, crie um arquivo na raiz do projeto com o seguinte nome:
+Then, create a file at the root of the project with the following name:
 
 ```bash
 .env.local
 ```
 
-E dentro dele, cole a linha abaixo:
+Inside it, add the line below:
 
 ```bash
 NEXT_PUBLIC_API_BASE_URL=http://localhost:5000
 ```
 
-Em seguida, execute o servidor de desenvolvimento:
+Next, start the development server:
 
 ```bash
 npm run dev
 ```
 
-Este comando iniciará o front-end na porta http://localhost:3000 e o back-end mockado (json-server) na porta http://localhost:5000.
+This command will start the front-end on http://localhost:3000 and the mocked back-end (json-server) on http://localhost:5000
 
-## Regras de Negócio
+## Business Rules
 
-1. Na página inicial, na seção "mais procurados" estão listados os eventos com mais ingressos vendidos;
+1. On the home page, in the "most searched" section, the events with the highest number of tickets sold are listed;
 
-2. Ao clicar em comprar em qualquer card de evento, o usuário será direcionado para a página de compra;
+2. When clicking "buy" on any event card, the user is redirected to the purchase page;
 
-3. Na listagem dos eventos na página "eventos", existem filtros que montam ma consulta por queryParam;
+3. On the "events" page, the event list includes filters that build a query using query parameters;
 
-4. É possível filtrar ao clicar no botão "filtrar" ou também limpar os filtros, clicando no botão "limpar filtros";
+4. Filters can be applied by clicking the "filter" button or cleared by clicking the "clear filters" button;
 
-5. Para adicionar um item ao carrinho, deve-se primeiro escolher o tipo do ingresso (VIP, Pista ou Meia) e a quantidade. Então clique em "selecionar" e depois "adicionar ao carrinho";
+5. To add an item to the cart, the user must first choose the ticket type (VIP, General Admission, or Half-price) and the quantity. Then click "select" and afterward "add to cart";
 
-6. É possível adicionar até 3 tipos de ingresso com diferentes quantidades (máximo de 5) para o mesmo evento no mesmo carrinho;
+6. It is possible to add up to 3 ticket types with different quantities (maximum of 5) for the same event in the same cart;
 
-7. É possível adicionar e remover itens do carrinho, bem como acessar o carrinho de qualquer lugar do E-Ventos;
+7. Items can be added to and removed from the cart, and the cart can be accessed from anywhere in E-Ventos;
 
-8. Só é possível finalizar uma compra se o usuário estiver autenticado. Caso não autenticado, é mostrada uma mensagem no carrinho e o usuário pode ir para a página de autenticação;
+8. A purchase can only be completed if the user is authenticated. If not authenticated, a message is displayed in the cart and the user can navigate to the authentication page;
 
-9. Na página de autenticação, é possível logar ou se registrar, e uma vez logado, tem acesso a finalizar uma compra;
+9. On the authentication page, the user can log in or register, and once logged in, they can complete a purchase;
 
-10. O carrinho e a autenticação são contextos e acessáveis de qualquer lugar do E-Ventos. O cache de ambos fica armazenado no sessionStorage.
-
-## O que pode melhorar
-
-1. Na página "eventos", o get que traz os eventos pode ser paginado ou implementado um lazy load;
-
-2. Pode ser adicionado um botão "carrinho" diretamente no card do evento, sem necessidade de entrar na página de compra;
+10. The cart and authentication are managed as contexts and can be accessed from anywhere in E-Ventos. Both caches are stored in sessionStorage.
