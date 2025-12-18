@@ -1,18 +1,5 @@
 import React from "react";
-
-interface iProps {
-  type: "text" | "date" | "number" | "select" | "password";
-  value: string | number | null;
-  onChange: (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => void;
-  id?: string;
-  label?: string;
-  options?: string[];
-  className?: string;
-  min?: number;
-  max?: number | null;
-}
+import { iInputProps } from "@/interfaces/iInput";
 
 const Input = ({
   id,
@@ -24,7 +11,7 @@ const Input = ({
   className,
   min = 0,
   max = null,
-}: iProps) => {
+}: iInputProps) => {
   const baseClass =
     "w-full text-sm bg-gray_1 border border-gray-300 rounded-lg p-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 hover:border-gray-400 mb-0";
 

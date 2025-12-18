@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { iCartTicket } from "@/interfaces/iCartTicket";
+import { iTicketType } from "@/interfaces/iTicketType";
 import { api } from "../api";
 import { baseURL } from "../api/config";
 
@@ -27,14 +26,14 @@ export const finishShopping = async (cartTickets: iCartTicket[]) => {
         const { data: apiTicket } = await api.get(url);
 
         const typeIndex = apiTicket.ticket_types?.findIndex(
-          (item: iCartTicket) => item.type === ticket.type
+          (item: iTicketType) => item.type === ticket.type
         );
 
         if (typeIndex !== -1) {
           const updatedTicket = {
             ...apiTicket,
             ticket_types: apiTicket.ticket_types.map(
-              (ticketType: any, index: number) => {
+              (ticketType: iTicketType, index: number) => {
                 if (index === typeIndex) {
                   return {
                     ...ticketType,
@@ -55,7 +54,6 @@ export const finishShopping = async (cartTickets: iCartTicket[]) => {
       }
     }
   } catch (error) {
-    console.error("Erro ao finalizar a compra:", error);
     throw error;
   }
 };

@@ -41,19 +41,19 @@ const Header: React.FC = () => {
           <ul className="flex items-center space-x-4 underline">
             <li>
               <Link href="/" className={isActive("/")}>
-                início
+                Home
               </Link>
             </li>
             <li>
               <Link href="/events" className={isActive("/events")}>
-                eventos
+                Events
               </Link>
             </li>
             <li
               onClick={toggleDrawer}
               className={`${isActive("/carrinho")} cursor-pointer`}
             >
-              carrinho
+              Cart
             </li>
 
             {isLoggedIn ? (
@@ -61,12 +61,12 @@ const Header: React.FC = () => {
                 onClick={() => handleLogout()}
                 className={`${isActive("/carrinho")} cursor-pointer`}
               >
-                sair
+                Logout
               </li>
             ) : (
               <li>
                 <Link href="/auth" className={isActive("/auth")}>
-                  entrar
+                  Login
                 </Link>
               </li>
             )}

@@ -1,8 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React, { useState, useCallback } from "react";
 import { iTickets } from "@/interfaces/iTickets";
+import { iTicketType } from "@/interfaces/iTicketType";
+import { useTranslation } from "@/hooks/useTranslation";
 import Loading from "@/components/atoms/Loading";
 import Image from "next/image";
 import Input from "@/components/atoms/Input";
@@ -17,8 +18,9 @@ interface iProps {
 }
 
 const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
+  const { t } = useTranslation();
   const [ticketType, setTicketType] = useState("");
-  const [selectedTicket, setSelectedTicket] = useState<any>(null);
+  const [selectedTicket, setSelectedTicket] = useState<iTicketType | null>(null);
   const [ticketQuantity, setTicketQuantity] = useState<number | null>(1);
   const [selectedTickets, setSelectedTickets] = useState<iCartTicket[]>([]);
   const [hasImageError, setHasImageError] = useState(false);
@@ -32,7 +34,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
       (item) => item.type === type
     );
 
-    setSelectedTicket(selectedTicketType);
+    setSelectedTicket(selectedTicketType || null);
 
     setTicketType(type);
     setTicketQuantity(1);
@@ -40,7 +42,8 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
 
   const handleAddToCart = useCallback(() => {
     const isNotAvailable =
-      selectedTicket?.available_quantity < (ticketQuantity || 1);
+      selectedTicket?.available_quantity !== undefined &&
+      selectedTicket.available_quantity < (ticketQuantity || 1);
 
     if (ticketQuantity === null || isNotAvailable) return;
 
@@ -153,7 +156,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
             <div>
               <p className="text-lg text-gray_5 mb-5">{ticket.description}</p>
               <h3 className="text-xs font-semibold mb-4 text-white">
-                TIPO DO INGRESSO
+                {t('eventBuy.ticketType')}
               </h3>
 
               <TicketTypeList
@@ -165,7 +168,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
               {selectedTicket && (
                 <div className="mb-5">
                   <h3 className="text-xs font-semibold mb-4 text-white">
-                    VALOR DA UNIDADE
+                    {t('eventBuy.unitValue')}
                   </h3>
 
                   <p className="text-lg font-medium text-gray_5">
@@ -176,7 +179,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
 
               <div className="mb-5">
                 <h3 className="text-xs font-semibold mb-4 text-white">
-                  QUANTIDADE
+                  {t('eventBuy.quantity')}
                 </h3>
 
                 <div className="flex flex-row items-center gap-3">
@@ -193,12 +196,13 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                     type="secondary"
                     onClick={() => handleAddToCart()}
                     label={
-                      selectedTickets.length > 0 ? "ATUALIZAR" : "SELECIONAR"
+                      selectedTickets.length > 0 ? t('eventBuy.update') : t('eventBuy.select')
                     }
                   />
                 </div>
 
-                {selectedTicket?.available_quantity < (ticketQuantity || 1) && (
+                {selectedTicket?.available_quantity !== undefined &&
+                  selectedTicket.available_quantity < (ticketQuantity || 1) && (
                   <p className="text-base text-red-500 mt-3">
                     Quantidade indisponível
                   </p>
@@ -209,7 +213,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                 <div className="mb-3">
                   <div className="mb-5">
                     <h3 className="text-xs font-semibold mb-4 text-white">
-                      INGRESSOS SELECIONADOS
+                      {t('eventBuy.selectedTickets')}
                     </h3>
                     <ul className="flex flex-row items-center gap-3 rounded-md text-sm">
                       {selectedTickets.map(({ type, quantity }) => (
@@ -225,7 +229,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
 
                   <div className="mb-5">
                     <h3 className="text-xs font-semibold mb-4 text-white">
-                      VALOR TOTAL
+                      {t('eventBuy.totalValue')}
                     </h3>
 
                     <p className="text-lg font-medium text-gray_5">
@@ -237,7 +241,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                     className="font-medium text-white"
                     onClick={() => handleGoToCart()}
                   >
-                    ADICIONAR AO CARRINHO
+                    {t('eventBuy.addToCart')}
                   </button>
                 </div>
               )}
@@ -246,7 +250,7 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
             {selectedTicket && (
               <div>
                 <h3 className="text-xs font-semibold mb-4 text-white">
-                  INFORMAÇÕES
+                  {t('eventBuy.information')}
                 </h3>
                 <div className="bg-black p-6 rounded-md shadow-sm">
                   <ul className="font-normal text-lg space-y-2 text-gray_5">
@@ -254,8 +258,8 @@ const EventBuySection: React.FC<iProps> = ({ ticket, isLoading }) => {
                       Data: {new Date(ticket.date).toLocaleDateString("pt-BR")}
                     </li>
                     <li>Local: {ticket.local}</li>
-                    <li>Vendidos: {selectedTicket.sold_quantity}</li>
-                    <li>Restantes: {selectedTicket.available_quantity}</li>
+                    <li>Vendidos: {selectedTicket?.sold_quantity || 0}</li>
+                    <li>Restantes: {selectedTicket?.available_quantity || 0}</li>
                   </ul>
                 </div>
               </div>

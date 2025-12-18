@@ -5,6 +5,7 @@ import SectionTitle from "../Title/SectionTitle";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Button from "../Button";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface PageHeaderProps {
   title: string;
@@ -13,6 +14,7 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle }) => {
   const router = useRouter();
+  const { t } = useTranslation();
 
   return (
     <section aria-label="Título da Página" className="bg-gray_11 p-4">
@@ -26,7 +28,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({ title, subtitle }) => {
             src="/images/get-back.svg"
             width={40}
             height={40}
-            alt="Voltar"
+            alt={t('navigation.back')}
           />
         </Button>
 

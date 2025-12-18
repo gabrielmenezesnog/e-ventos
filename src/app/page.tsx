@@ -9,14 +9,16 @@ export default async function Home() {
 
   try {
     tickets = await getBestSellers();
-  } catch (error) {
-    console.error("Failed to fetch best sellers", error);
+  } catch {
+    tickets = [];
   }
 
   return (
     <main>
       <HeroSection />
-      <BestSellersSection tickets={tickets} isLoading={false} />
+      {tickets.length > 0 && (
+        <BestSellersSection tickets={tickets} isLoading={false} />
+      )}
     </main>
   );
 }

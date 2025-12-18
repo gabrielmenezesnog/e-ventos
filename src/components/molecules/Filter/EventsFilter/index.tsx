@@ -3,6 +3,7 @@
 import Button from "@/components/atoms/Button";
 import Input from "@/components/atoms/Input";
 import { iTickets } from "@/interfaces/iTickets";
+import { useTranslation } from "@/hooks/useTranslation";
 import { useState } from "react";
 
 interface EventsFilterProps {
@@ -11,6 +12,7 @@ interface EventsFilterProps {
 }
 
 const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
+  const { t } = useTranslation();
   const [name, setName] = useState<string>("");
   const [startDate, setStartDate] = useState<string>("");
   const [endDate, setEndDate] = useState<string>("");
@@ -75,7 +77,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
         <div className="w-full sm:w-auto">
           <Input
             id="name"
-            label="Nome"
+            label={t('filters.name')}
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -85,7 +87,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
         <div className="w-full sm:w-auto">
           <Input
             id="startDate"
-            label="Data Inicial"
+            label={t('filters.startDate')}
             type="date"
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
@@ -95,7 +97,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
         <div className="w-full sm:w-auto">
           <Input
             id="endDate"
-            label="Data Final"
+            label={t('filters.endDate')}
             type="date"
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
@@ -105,7 +107,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
         <div className="w-full sm:w-auto -mt-1">
           <Input
             id="location"
-            label="Local"
+            label={t('filters.location')}
             type="select"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
@@ -116,7 +118,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
         <div className="w-full sm:w-auto">
           <Input
             id="minPrice"
-            label="Preço Mínimo"
+            label={t('filters.minPrice')}
             type="number"
             value={minPrice}
             onChange={(e) => setMinPrice(e.target.value)}
@@ -126,7 +128,7 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
         <div className="w-full sm:w-auto">
           <Input
             id="maxPrice"
-            label="Preço Máximo"
+            label={t('filters.maxPrice')}
             type="number"
             value={maxPrice}
             onChange={(e) => setMaxPrice(e.target.value)}
@@ -135,10 +137,10 @@ const EventsFilter = ({ tickets, onFilter }: EventsFilterProps) => {
       </div>
 
       <div className="flex flex-row items-center gap-4">
-        <Button type="default" label="Filtrar" onClick={filterTickets} />
+        <Button type="default" label={t('filters.filterButton')} onClick={filterTickets} />
         <Button
           type="secondary"
-          label="Limpar Filtros"
+          label={t('filters.clearFilters')}
           onClick={resetFilters}
         />
       </div>

@@ -4,6 +4,7 @@ import React from "react";
 import SectionTitle from "@/components/atoms/Title/SectionTitle";
 import { iTickets } from "@/interfaces/iTickets";
 import TicketsList from "@/components/atoms/TicketsList";
+import { useTranslation } from "@/hooks/useTranslation";
 
 interface iProps {
   tickets: iTickets[];
@@ -11,13 +12,19 @@ interface iProps {
 }
 
 const BestSellersSection: React.FC<iProps> = ({ tickets, isLoading }) => {
+  const { t } = useTranslation();
+
+  if (!tickets || tickets.length === 0) {
+    return null;
+  }
+
   return (
     <div className="mb-10">
       <div>
         <div className="container px-5">
           <SectionTitle
-            normalText="mais procurados"
-            coloredText="."
+            normalText={t('bestSellers.title')}
+            coloredText={t('bestSellers.titleHighlight')}
             isDark={false}
           />
         </div>
